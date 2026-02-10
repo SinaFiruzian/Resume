@@ -1,0 +1,266 @@
+    #stage-3 {
+        font-size: 32px;
+        /* background: url('/img/about/AboutMe8.jpg'); */
+        /* background: url('/img/skills/deep-stage-3.jpg'); */
+        background-size: cover;
+        color: #fff;
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+        font-size: 25px;
+        direction: rtl;
+        background-size: cover;
+    }
+
+
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+        margin-right: 60px;
+    }
+
+    .skill {
+        margin-bottom: 8%;
+    }
+
+    /* باکس اصلی */
+    .skill-box {
+        position: relative;
+        width: 70px;
+        /* حالت اسم */
+        height: 38px;
+        max-width: 100%;
+        background: #222;
+        border-radius: 2rem;
+        overflow: hidden;
+        transform: translateX(-120px);
+        opacity: 0;
+        transition:
+            transform 0.6s ease,
+            opacity 0.6s ease,
+            width 0.6s ease;
+    }
+
+    @media (max-width: 900px) {
+        .layout {
+            grid-template-columns: 1fr;
+            /* یک ستون */
+        }
+
+        .skills-area {
+            padding: 40px 20px;
+            width: 90%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .right {
+            display: none;
+        }
+
+        .skills {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            /* justify-content: center; */
+            margin-right: 20px;
+            margin-top: -30%;
+        }
+    }
+
+
+
+    .skill-name {
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        padding-left: 12px;
+        line-height: 28px;
+        white-space: nowrap;
+    }
+
+    /* نوار پرشونده */
+    .fill {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0;
+        background: linear-gradient(90deg, #ff4d4d, #ff9900);
+        transition: width 1s ease;
+        z-index: 1;
+    }
+
+
+    /* ستون راست */
+    .right {
+        padding: 60px;
+        color: #0e0e0e;
+    }
+
+    /* ریسپانسیو موبایل */
+    @media (max-width: 900px) {
+        .layout {
+            grid-template-columns: 1fr;
+        }
+
+        .left {
+            border-bottom: 1px solid #222;
+        }
+    }
+
+    .layout {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        min-height: 100vh;
+    }
+
+    .skills-area {
+        width: clamp(420px, 40vw, 560px);
+        /* کلیدی */
+        padding: 60px 0 60px 40px;
+        background: #0e0e0e;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 2rem 0 0 2rem ;
+        height: 100vh;
+        box-shadow: 0 0 10px 7px gray;
+    }
+
+    .openmodal {
+        display: none;
+    }
+
+
+
+    .modal {
+        position: fixed;
+        z-index: 9999;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        transition: all 1s ease;
+    }
+
+    .modal.active {
+        opacity: 1;
+    }
+
+    .modal-content {
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+        position: relative;
+    }
+
+    .close {
+        position: absolute;
+        top: 0px;
+        left: 20px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    .projects {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 8%;
+        margin-top: 8%;
+    }
+
+    .project {
+        background: rgb(20, 20, 20);
+        background-image: url("/img/stage-3/deep-stage-3.jpg");
+        background-size: cover;
+        border-radius: 2rem;
+        height: 10rem;
+        width: 10rem;
+        box-shadow: 10px 8px 20px 0px gray, inset 0px 0px 10px white;
+        transition: transform .6s ease;
+        display: flex;
+        align-content: center;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+    }
+
+    .project-name {
+        background: #22222281;
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.438);
+        display: flex;
+        border-radius: 0 0 2rem 2rem;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 5%;
+        margin-bottom: 1%;
+        pointer-events: none;
+        color: white;
+
+    }
+
+    @media (hover: hover) {
+
+
+        .project:hover {
+            transform: scale(1.2);
+            animation: rotate .6s ease-in-out infinite alternate;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: scale(1.2) rotate(5deg);
+            }
+
+            100% {
+                transform: scale(1.2) rotate(-5deg);
+            }
+        }
+    }
+
+    @media (max-width: 900px) {
+        .openmodal {
+            display: block;
+        }
+
+        #fill {
+            background: linear-gradient(90deg, #ff0000, #ff5100);
+
+        }
+
+        #skill-name {
+            text-align: center;
+            justify-self: anchor-center;
+        }
+
+        .projects {
+            display: flex;
+            justify-items: center;
+            margin: 8% auto;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project {
+            /* flex: 0 0 calc(50%); */
+            /* هر آیتم نصف عرض به‌علاوه نصف gap */
+            box-sizing: border-box;
+            height: 8rem;
+            width: 8rem;
+            /* شامل padding و border شود */
+        }
+    }
+    .project-1{background: url("/img/stage-3/Explore.png"); background-size: cover;}
+    .project-2{background: url("/img/stage-3/nusic-pg.png"); background-size: cover;}
+        
+    .project-3{background: url("/img/stage-3/panel.png"); background-size: cover;box-shadow: 10px 8px 20px 0px gray, inset 0px 0px 10px rgb(0, 0, 0);}

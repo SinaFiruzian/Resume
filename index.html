@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سینا فیروزیان | رزومه</title>
+
+    <meta name="description"
+        content="رزومه رسمی سینا فیروزیان؛ معرفی سوابق کاری، مهارت‌ها، پروژه‌ها و راه‌های ارتباطی.">
+        
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/iranian-sans">
+    <link rel="stylesheet" href="/css/navigations.css">
+    <link rel="stylesheet" href="/css/stage-1.css">
+    <link rel="stylesheet" href="/css/stage-2.css">
+    <link rel="stylesheet" href="/css/stage-3.css">
+
+
+    <style>
+        body {
+            font-family: 'Iranian Sans';
+            font-style: normal;
+            font-weight: 800;
+            src: local('Iranian Sans'), url('https://fonts.cdnfonts.com/s/19710/irsans.woff') format('woff');
+        }
+
+
+        .stage {
+            position: fixed;
+            inset: 0;
+            opacity: 0;
+            transform: scale(1.2);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .stage.active {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+
+        .icon-style {
+            background-size: cover;
+            width: 40px;
+            opacity: 0.6;
+        }
+
+        .stage {
+            will-change: opacity, transform;
+
+            transition: opacity .4s ease-in-out, transform .6s ease-in-out;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <fieldset class="switcher">
+        <label class="switcher__option">
+            <input class="switcher__input" type="radio" name="theme" c-option="1" checked />
+            <img class="icon-style" src="img/icon/home.png" alt="">
+        </label>
+        <label class="switcher__option">
+            <input class="switcher__input" type="radio" name="theme" c-option="2" />
+            <img class="icon-style" src="img/icon/aboutMeLogo.png" alt="">
+        </label>
+        <label class="switcher__option">
+            <input class="switcher__input" type="radio" name="theme" c-option="3" />3
+        </label>
+        <label class="switcher__option">
+            <input class="switcher__input" type="radio" name="theme" c-option="4" />4
+        </label>
+    </fieldset>
+
+    <!-- محتوای سکشن 1 -->
+    <section class="stage stage-1 active header">
+        <div class="head-glasses">
+            <svg class="caption-svg" viewBox="0 0 350 200" preserveAspectRatio="xMidYMid meet">
+                <path id="text-curve" d="M 0 160 A 160 160 0 0 1 300 160" fill="transparent" />
+
+                <text font-size="25" fill="#333">
+                    <textPath id="typing-text" href="#text-curve" startOffset="50%" text-anchor="middle">
+                    </textPath>
+                </text>
+            </svg>
+            <img src="img/Sinos60!.jpg" alt="" loading="lazy">
+            <div class="caption">
+                <div class="name glass-caption">
+                    <h1>سینا فیروزیان</h1>
+                </div>
+            </div>
+
+            <!-- دسکتاپ -->
+            <div class="scroll-hint desktop">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow"></div>
+            </div>
+
+            <!-- موبایل -->
+            <div class="scroll-hint mobile">
+                <div class="scroll-hand"></div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- محتوای سکشن 2 -->
+    <section id="about" class="stage stage-2 about">
+        <video class="bg-video" loop muted playsinline>
+            <source src="/img/stage-2/stage-2.webm" type="video/webm">
+        </video>
+        <div class="stage-2-content">
+            <h3>پیام را بکشید و جابه‌جا کنید</h3>
+            <div id="chatBody"></div>
+        </div>
+    </section>
+
+
+
+    <!-- محتوای سکشن 3 -->
+    <section id="stage-3" class="stage stage-3">
+        <div class="layout">
+
+            <!-- ستون چپ: مهارت‌ها -->
+            <aside class="skills-area">
+                <section class="skills">
+                    <div class="skill" data-percent="100">
+                        <div class="skill-box">
+                            <span class="skill-name">BootStrap</span>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill" data-percent="90">
+                        <div class="skill-box">
+                            <span class="skill-name">HTML</span>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill" data-percent="85">
+                        <div class="skill-box">
+                            <span class="skill-name">CSS</span>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill" data-percent="80">
+                        <div class="skill-box">
+                            <span class="skill-name">English</span>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill" data-percent="70">
+                        <div class="skill-box">
+                            <span class="skill-name">SQL</span>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill" data-percent="65">
+                        <div class="skill-box">
+                            <span class="skill-name">Django</span>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill" data-percent="55">
+                        <div class="skill-box">
+                            <span class="skill-name">Python</span>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill" data-percent="40">
+                        <div class="skill-box">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill openmodal" data-percent="100" onclick="openModal()">
+                        <div class="skill-box">
+                            <span id="skill-name" class="skill-name">نمونه کار و مدارک</span>
+                            <div id="fill" class="fill ProjectCertificate"></div>
+                        </div>
+                    </div>
+
+
+                    <div id="fullModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal()">×</span>
+                            <h2>نمونه کارها</h2>
+
+                            <div class="projects">
+                                <div class="project project-1">
+                                    <div class="project-name">Explore</div>
+                                </div>
+                                <div class="project project-2">
+                                    <div class="project-name">music-pg</div>
+                                </div>
+                                <div class="project project-3">
+                                    <div class="project-name">panel</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <h2 style="border-bottom: 1px solid; width:100px; margin-bottom:5%;padding-bottom:2%;">مدارک
+                            </h2>
+                            <div>چیزی یافت نشد!</div>
+                            </main>
+                        </div>
+                    </div>
+
+                </section>
+            </aside>
+
+            <!-- ستون راست: نمونه کار -->
+            <main class="right">
+                <h2>نمونه کارها</h2>
+
+                <div class="projects">
+                    <div class="project  project-1">
+                        <div class="project-name">Explore</div>
+                    </div>
+                    <div class="project  project-2">
+                        <div class="project-name">music-pg</div>
+                    </div>
+                    <div class="project project-3">
+                        <div class="project-name">panel</div>
+                    </div>
+                </div>
+                <hr>
+                <h2 style="border-bottom: 1px solid; width:100px; margin-bottom:5%;padding-bottom:2%;">مدارک</h2>
+                <div>چیزی یافت نشد!</div>
+            </main>
+        </div>
+
+
+    </section>
+
+
+    <section class="stage stage-4">
+        © 2025 – Sinos60! | تمامی حقوق محفوظ است
+    </section>
+
+    <script>
+        function openModal() {
+            const modal = document.querySelector('.modal');
+            modal.style.display = 'block';
+            setTimeout(() => modal.classList.add('active'), 10);
+        }
+
+        function closeModal() {
+            const modal = document.querySelector('.modal');
+            modal.classList.remove('active');
+            setTimeout(() => modal.style.display = 'none', 500);
+        }
+
+
+    </script>
+
+    <!-- #typing Effect/stage-1 -->
+    <script>
+        const texts = [
+            "من برنامه نویس وب هستم",
+        ];
+
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const speed = 100;
+        const deleteSpeed = 50;
+        const delayBetweenTexts = 1500;
+
+        function typeEffect() {
+            const element = document.getElementById("typing-text");
+            const currentText = texts[textIndex];
+
+            if (isDeleting) {
+                element.textContent = currentText.substring(0, charIndex--);
+            } else {
+                element.textContent = currentText.substring(0, charIndex++);
+            }
+
+            if (!isDeleting && charIndex === currentText.length) {
+                setTimeout(() => isDeleting = true, delayBetweenTexts);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+            }
+
+            setTimeout(typeEffect, isDeleting ? deleteSpeed : speed);
+        }
+
+        typeEffect();
+    </script>
+
+    <script>
+
+        let skillTimeouts = []; // ذخیره timeoutها
+        let demoStage2Started = false;
+        let isTransitioning = false;
+        let current = 0;
+        let pendingIndex = null;
+
+        const stages = [...document.querySelectorAll('.stage')];
+        const radios = [...document.querySelectorAll('.switcher__input')];
+
+        function showStage(index) {
+            if (isTransitioning) {
+                pendingIndex = index;
+                return;
+            }
+
+            isTransitioning = true;
+
+            // cleanup Stage قبلی
+            cleanupStage(current);
+
+            stages.forEach((stage, i) => {
+                if (i === index) {
+                    stage.classList.add('active');
+                    initStage(i);
+                } else {
+                    stage.classList.remove('active');
+                }
+            });
+
+            if (radios[index]) radios[index].checked = true;
+
+            setTimeout(() => {
+                isTransitioning = false;
+
+                if (pendingIndex !== null && pendingIndex !== current) {
+                    const next = pendingIndex;
+                    pendingIndex = null;
+                    current = next;
+                    showStage(current);
+                }
+            }, 600);
+
+            current = index;
+        }
+
+        function initStage(i) {
+            if (i === 1 && !demoStage2Started) {
+                demoStage2Started = true;
+                startDemo(); // تابع دلخواه خودت
+                playBgVideo();
+            }
+
+            if (i === 2) {
+                const stage = stages[i];
+                animateSkills(stage);
+            }
+        }
+
+        function cleanupStage(i) {
+            const stage = stages[i];
+            if (!stage) return;
+
+            // لغو تمام timeoutهای مهارت‌ها
+            skillTimeouts.forEach(t => clearTimeout(t));
+            skillTimeouts = [];
+
+            const skills = stage.querySelectorAll('.skill');
+            skills.forEach(skill => {
+                const box = skill.querySelector('.skill-box');
+                const fill = skill.querySelector('.fill');
+
+                box.style.transform = 'translateX(-120px)';
+                box.style.opacity = '0';
+                box.style.width = '70px';
+                fill.style.width = '0';
+            });
+        }
+
+        function animateSkills(container) {
+            const skills = container.querySelectorAll('.skill');
+
+            skills.forEach((skill, index) => {
+                const box = skill.querySelector('.skill-box');
+                const fill = skill.querySelector('.fill');
+                const percent = skill.dataset.percent;
+
+                skillTimeouts.push(setTimeout(() => {
+                    box.style.transform = 'translateX(0)';
+                    box.style.opacity = '1';
+                }, index * 350));
+
+                skillTimeouts.push(setTimeout(() => {
+                    box.style.width = '100%';
+                }, skills.length * 350 + index * 250));
+
+                skillTimeouts.push(setTimeout(() => {
+                    fill.style.width = percent + '%';
+                }, skills.length * 350 + index * 250 + 600));
+            });
+        }
+
+        function playBgVideo() {
+            const video = document.querySelector('.bg-video');
+            if (!video) return;
+
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log('Video play failed:', error);
+                });
+            }
+        }
+
+        /* ---------- radio navigation ---------- */
+        radios.forEach(radio => {
+            radio.addEventListener('change', function () {
+                const target = +this.getAttribute('c-option') - 1;
+                showStage(target);
+            });
+        });
+
+        /* ---------- mouse wheel ---------- */
+        window.addEventListener('wheel', e => {
+            e.preventDefault();
+            if (isTransitioning) return;
+
+            const dir = Math.sign(e.deltaY);
+            if (dir === 0) return;
+
+            const next = current + dir;
+            if (next < 0 || next >= stages.length) return;
+
+            showStage(next);
+        }, { passive: false });
+
+        /* ---------- touch ---------- */
+        /*        let startY = 0;
+                window.addEventListener('touchstart', e => {
+                    startY = e.touches[0].clientY;
+                });
+                window.addEventListener('touchend', e => {
+                    if (isTransitioning) return;
+        
+                    const delta = startY - e.changedTouches[0].clientY;
+                    if (Math.abs(delta) < 50) return;
+        
+                    const dir = delta > 0 ? 1 : -1;
+                    const next = current + dir;
+                    if (next < 0 || next >= stages.length) return;
+        
+                    showStage(next);
+                });
+        */
+        // شروع اولیه
+        showStage(current);
+
+    </script>
+
+    <!-- stage-3/script -->
+    <script>
+        let demoStarted = false;
+        let lastX = 0;
+        let lastY = 0;
+        let velocityX = 0;
+        let velocityY = 0;
+
+        function isMobile() {
+            return window.innerWidth < 768;
+        }
+
+
+        // ---------- اجرا فقط یک بار ----------
+        function startDemo() {
+            const messages = [
+                "من سینا فیروزیان هستم !",
+                `کسی که از ساختن، فکر کردن و تبدیل ایده به نتیجه لذت می‌برد.`,
+                "چیزی که برای من جذابه، روند خلق یک محصول از صفره!!",
+                "به کارهایی علاقه دارم که ذهن را درگیر می‌کنند",
+                "کارهایی که با تمرکز، دقت و کمی وسواس می‌شود آن‌ها را بهتر و بهتر کرد",
+                "متولد ۱۶ دی ۱۳۸۵ و زاده‌ی بهشهر هستم",
+                "مسیرم را با یادگیری مداوم و تجربه جلو می‌برم و سعی می‌کنم در هر پروژه، کیفیت و تمیزی اجرا را در اولویت قرار بدهم"
+            ];
+
+            const create = isMobile() ? createMessageMobile : createMessage;
+            let delay = 0;
+
+            messages.forEach((msg, i) => {
+                setTimeout(() => requestAnimationFrame(() => create(msg)), 1500 + i * 2000);
+            });
+        }
+
+
+
+
+        function isOverlapping(x, y, w, h, elements) {
+            return elements.some(el => {
+                const ex = el.offsetLeft;
+                const ey = el.offsetTop;
+                const ew = el.offsetWidth;
+                const eh = el.offsetHeight;
+
+                return !(
+                    x + w <= ex ||
+                    x >= ex + ew ||
+                    y + h <= ey ||
+                    y >= ey + eh
+                );
+            });
+        }
+
+
+
+        // ---------- ایجاد پیام ----------
+        function createMessage(text) {
+            const msg = document.createElement('div');
+            msg.className = 'draggable';
+            msg.style.position = 'absolute';
+            msg.style.opacity = '0';
+            msg.style.transition = 'opacity 1s ease';
+
+            const textEl = document.createElement('div');
+            textEl.className = 'message-text';
+            textEl.textContent = text;
+            msg.appendChild(textEl);
+
+            const meta = document.createElement('div');
+            meta.className = 'meta';
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            meta.innerHTML = `<span class="time">${hours}:${minutes}</span><span class="ticks sent">✔✔</span>`;
+            msg.appendChild(meta);
+
+            chatBody.appendChild(msg); // اضافه کردن قبل از گرفتن اندازه
+
+            const area = chatBody.getBoundingClientRect();
+            const SAFE = { left: 10, right: 10, top: 25, bottom: 25 };
+            const maxX = area.width - msg.offsetWidth - SAFE.right;
+            const maxY = area.height - msg.offsetHeight - SAFE.bottom;
+            const minX = SAFE.left;
+            const minY = SAFE.top;
+
+            const existingMessages = [...chatBody.querySelectorAll('.draggable')].filter(m => m !== msg);
+
+            let x, y, attempts = 0;
+            const MAX_ATTEMPTS = 100;
+
+            do {
+                x = Math.random() * (maxX - minX) + minX;
+                y = Math.random() * (maxY - minY) + minY;
+                attempts++;
+            } while (isOverlapping(x, y, msg.offsetWidth, msg.offsetHeight, existingMessages) && attempts < MAX_ATTEMPTS);
+
+            msg.style.left = x + 'px';
+            msg.style.top = y + 'px';
+
+            setTimeout(() => {
+                msg.style.opacity = '1';
+                const ticks = msg.querySelector('.ticks');
+                setTimeout(() => ticks.className = 'ticks delivered', 500);
+                setTimeout(() => ticks.className = 'ticks seen', 1200);
+            }, 50);
+
+            enableDrag(msg);
+        }
+
+        function createMessageMobile(text) {
+            const msg = document.createElement('div');
+            msg.className = 'draggable mobile-message';
+            msg.style.opacity = '0';
+            msg.style.transition = 'opacity 0.8s ease';
+
+            const textEl = document.createElement('div');
+            textEl.className = 'message-text';
+            textEl.textContent = text;
+            msg.appendChild(textEl);
+
+            const meta = document.createElement('div');
+            meta.className = 'meta';
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            meta.innerHTML = `<span class="time">${hours}:${minutes}</span><span class="ticks sent">✔✔</span>`;
+            msg.appendChild(meta);
+
+            chatBody.appendChild(msg);
+
+            setTimeout(() => {
+                msg.style.opacity = '1';
+                const ticks = msg.querySelector('.ticks');
+                setTimeout(() => ticks.className = 'ticks delivered', 500);
+                setTimeout(() => ticks.className = 'ticks seen', 1200);
+            }, 50);
+
+        }
+
+
+        // ---------- drag موس ----------
+        let activeDragEl = null;
+        let dragOffsetX = 0;
+        let dragOffsetY = 0;
+        let topZIndex = 1;
+
+        function enableDrag(el) {
+            el.addEventListener('mousedown', e => {
+                activeDragEl = el;
+                dragOffsetX = e.clientX - el.offsetLeft;
+                dragOffsetY = e.clientY - el.offsetTop;
+                lastX = e.clientX;
+                lastY = e.clientY;
+                velocityX = 0;
+                velocityY = 0;
+                el.style.cursor = 'grabbing';
+
+                topZIndex++;
+                el.style.zIndex = topZIndex;
+
+                e.preventDefault();
+            });
+        }
+
+        window.addEventListener('mousemove', e => {
+            if (!activeDragEl) return;
+
+            // محاسبه‌ی velocity درست
+            velocityX = e.clientX - lastX;
+            velocityY = e.clientY - lastY;
+
+            lastX = e.clientX;
+            lastY = e.clientY;
+
+            activeDragEl.style.left = (e.clientX - dragOffsetX) + 'px';
+            activeDragEl.style.top = (e.clientY - dragOffsetY) + 'px';
+        });
+
+        window.addEventListener('mouseup', e => {
+            if (!activeDragEl) return;
+
+
+            activeDragEl.style.cursor = 'grab';
+            activeDragEl = null;
+        });
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
