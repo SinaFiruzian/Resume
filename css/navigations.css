@@ -307,3 +307,9 @@
            translate: 0 228px;
        }
    }
+
+   .icon-style {
+       background-size: cover;
+       width: 40px;
+       opacity: 0.6;
+   }

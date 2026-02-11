@@ -5,21 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سینا فیروزیان | رزومه</title>
-
     <meta name="description"
         content="رزومه رسمی سینا فیروزیان؛ معرفی سوابق کاری، مهارت‌ها، پروژه‌ها و راه‌های ارتباطی.">
-        
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-
     <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/iranian-sans">
     <link rel="stylesheet" href="/css/navigations.css">
     <link rel="stylesheet" href="/css/stage-1.css">
     <link rel="stylesheet" href="/css/stage-2.css">
     <link rel="stylesheet" href="/css/stage-3.css">
-
-
+    <link rel="stylesheet" href="/css/stage-4.css">
     <style>
         body {
             font-family: 'Iranian Sans';
@@ -44,25 +39,15 @@
             pointer-events: auto;
         }
 
-
-        .icon-style {
-            background-size: cover;
-            width: 40px;
-            opacity: 0.6;
-        }
-
         .stage {
             will-change: opacity, transform;
 
             transition: opacity .4s ease-in-out, transform .6s ease-in-out;
         }
     </style>
-
-
 </head>
 
 <body>
-
     <fieldset class="switcher">
         <label class="switcher__option">
             <input class="switcher__input" type="radio" name="theme" c-option="1" checked />
@@ -73,10 +58,12 @@
             <img class="icon-style" src="img/icon/aboutMeLogo.png" alt="">
         </label>
         <label class="switcher__option">
-            <input class="switcher__input" type="radio" name="theme" c-option="3" />3
+            <input class="switcher__input" type="radio" name="theme" c-option="3" />
+            <img class="icon-style" src="img/icon/skill.png" alt="">
         </label>
         <label class="switcher__option">
-            <input class="switcher__input" type="radio" name="theme" c-option="4" />4
+            <input class="switcher__input" type="radio" name="theme" c-option="4" />
+            <img class="icon-style" src="img/icon/social.png" alt="">
         </label>
     </fieldset>
 
@@ -111,7 +98,6 @@
                 <div class="scroll-hand"></div>
             </div>
         </div>
-
     </section>
 
 
@@ -246,15 +232,164 @@
                 <div>چیزی یافت نشد!</div>
             </main>
         </div>
-
-
     </section>
 
+    <section class="stage stage-4" style="overflow-y: auto;">
+        <div class="main-wrapper">
 
-    <section class="stage stage-4">
-        © 2025 – Sinos60! | تمامی حقوق محفوظ است
+            <!-- بخش وسط (نوشتن کامنت) -->
+            <div class="comment-write" id="commentWrite" dir="rtl">
+                <h5 class="mb-3">نظر خودتو بنویس</h5>
+                <input type="text" class=" mb-2" placeholder="نام شما">
+                <textarea class="mb-2" rows="3" placeholder="نظر شما..."></textarea>
+                <button class="btn"></button>
+            </div>
+
+            <!-- پنل نمایش کامنت‌ها -->
+            <div class="comments-view" id="commentsView" dir="rtl">
+                <h5 class="mb-3">نظرات کاربران</h5>
+
+                <div class="comment-item">
+                    <h6>مقول:</h6>
+                    <p>عالی بود 👌</p>
+                </div>
+
+                <div class="comment-item">
+                    <h6>چنگیز:</h6>
+                    <p>طراحی تمیزه 🔥</p>
+                </div>
+
+                <div class="comment-item">
+                    <h6>تیمور:</h6>
+                    <p>طراحی تمیزه 🔥</p>
+                </div>
+
+                <div class="comment-item">
+                    <h6>هوشنگ:</h6>
+                    <p>طراحی تمیزه 🔥</p>
+                </div>
+
+                <div class="comment-item">
+                    <h6>اکبر:</h6>
+                    <p>طراحی تمیزه 🔥</p>
+                </div>
+
+                <div class="comment-item">
+                    <h6>اصفر:</h6>
+                    <p>طراحی تمیزه 🔥</p>
+                </div>
+
+                <div class="comment-item">
+                    <h6>کم اوردم:</h6>
+                    <p>طراحی تمیزه 🔥</p>
+                </div>
+            </div>
+
+
+            <div class="links-container text-center" id="socialBox">
+
+                <h2>Find Me On 👇</h2>
+
+                <div class="links">
+
+                    <div class="link">
+                        <div class="txt">@Sinos60</div>
+                        <img src="/img/icon/social/telegram.png" alt="">
+                    </div>
+
+                    <div class="link">
+                        <div class="txt">Instagram</div>
+                        <img src="/img/icon/social/instagram.png" alt="">
+                    </div>
+
+                    <div class="link">
+                        <div class="txt">GitHub</div>
+                        <img src="/img/icon/social/github.png" alt="">
+                    </div>
+
+                    <div class="link">
+                        <div class="txt">09018894512</div>
+                        <img src="/img/icon/social/call.png" alt="">
+                    </div>
+
+                    <div class="link">
+                        <div class="txt">firuziansina@gmail.com</div>
+                        <img src="/img/icon/social/gmail.png" alt="">
+                    </div>
+
+                    <div class="link" id="toggleComments">
+                        <div class="txt">بازخورد و نظرات</div>
+                        <img src="/img/icon/social/chat.png" alt="">
+                    </div>
+
+
+                </div>
+
+                <div class="footer">
+                    © 2026 – Sinos60 | تمامی حقوق محفوظ است
+                </div>
+
+            </div>
+        </div>
     </section>
+    <script>
+        const toggleBtn = document.getElementById("toggleComments");
+        const commentsView = document.getElementById("commentsView");
+        const commentWrite = document.getElementById("commentWrite");
+        const socialBox = document.getElementById("socialBox");
 
+        toggleBtn.addEventListener("click", () => {
+            commentsView.classList.toggle("active");
+            commentWrite.classList.toggle("active");
+            socialBox.classList.toggle("shift");
+        });
+        // درگ برای scroll
+        let isDown = false;
+        let startY;
+        let scrollTop;
+
+        commentsView.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startY = e.pageY - commentsView.offsetTop;
+            scrollTop = commentsView.scrollTop;
+            commentsView.style.cursor = 'grabbing';
+        });
+
+        commentsView.addEventListener('mouseleave', () => {
+            isDown = false;
+            commentsView.style.cursor = 'default';
+        });
+
+        commentsView.addEventListener('mouseup', () => {
+            isDown = false;
+            commentsView.style.cursor = 'default';
+        });
+
+        commentsView.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const y = e.pageY - commentsView.offsetTop;
+            const walk = (y - startY) * 1; // سرعت scroll، 1 برای طبیعی
+            commentsView.scrollTop = scrollTop - walk;
+        });
+
+        // touch devices
+        let startTouchY;
+        let startScrollTop;
+        commentsView.addEventListener('touchstart', (e) => {
+            startTouchY = e.touches[0].pageY;
+            startScrollTop = commentsView.scrollTop;
+        });
+
+        commentsView.addEventListener('touchmove', (e) => {
+            const y = e.touches[0].pageY;
+            const walk = (y - startTouchY);
+            commentsView.scrollTop = startScrollTop - walk;
+        });
+    </script>
+
+
+    <!-- open modal stage-3 just in *>450px(controling on Css) -->
     <script>
         function openModal() {
             const modal = document.querySelector('.modal');
@@ -267,394 +402,10 @@
             modal.classList.remove('active');
             setTimeout(() => modal.style.display = 'none', 500);
         }
-
-
     </script>
-
-    <!-- #typing Effect/stage-1 -->
-    <script>
-        const texts = [
-            "من برنامه نویس وب هستم",
-        ];
-
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        const speed = 100;
-        const deleteSpeed = 50;
-        const delayBetweenTexts = 1500;
-
-        function typeEffect() {
-            const element = document.getElementById("typing-text");
-            const currentText = texts[textIndex];
-
-            if (isDeleting) {
-                element.textContent = currentText.substring(0, charIndex--);
-            } else {
-                element.textContent = currentText.substring(0, charIndex++);
-            }
-
-            if (!isDeleting && charIndex === currentText.length) {
-                setTimeout(() => isDeleting = true, delayBetweenTexts);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-            }
-
-            setTimeout(typeEffect, isDeleting ? deleteSpeed : speed);
-        }
-
-        typeEffect();
-    </script>
-
-    <script>
-
-        let skillTimeouts = []; // ذخیره timeoutها
-        let demoStage2Started = false;
-        let isTransitioning = false;
-        let current = 0;
-        let pendingIndex = null;
-
-        const stages = [...document.querySelectorAll('.stage')];
-        const radios = [...document.querySelectorAll('.switcher__input')];
-
-        function showStage(index) {
-            if (isTransitioning) {
-                pendingIndex = index;
-                return;
-            }
-
-            isTransitioning = true;
-
-            // cleanup Stage قبلی
-            cleanupStage(current);
-
-            stages.forEach((stage, i) => {
-                if (i === index) {
-                    stage.classList.add('active');
-                    initStage(i);
-                } else {
-                    stage.classList.remove('active');
-                }
-            });
-
-            if (radios[index]) radios[index].checked = true;
-
-            setTimeout(() => {
-                isTransitioning = false;
-
-                if (pendingIndex !== null && pendingIndex !== current) {
-                    const next = pendingIndex;
-                    pendingIndex = null;
-                    current = next;
-                    showStage(current);
-                }
-            }, 600);
-
-            current = index;
-        }
-
-        function initStage(i) {
-            if (i === 1 && !demoStage2Started) {
-                demoStage2Started = true;
-                startDemo(); // تابع دلخواه خودت
-                playBgVideo();
-            }
-
-            if (i === 2) {
-                const stage = stages[i];
-                animateSkills(stage);
-            }
-        }
-
-        function cleanupStage(i) {
-            const stage = stages[i];
-            if (!stage) return;
-
-            // لغو تمام timeoutهای مهارت‌ها
-            skillTimeouts.forEach(t => clearTimeout(t));
-            skillTimeouts = [];
-
-            const skills = stage.querySelectorAll('.skill');
-            skills.forEach(skill => {
-                const box = skill.querySelector('.skill-box');
-                const fill = skill.querySelector('.fill');
-
-                box.style.transform = 'translateX(-120px)';
-                box.style.opacity = '0';
-                box.style.width = '70px';
-                fill.style.width = '0';
-            });
-        }
-
-        function animateSkills(container) {
-            const skills = container.querySelectorAll('.skill');
-
-            skills.forEach((skill, index) => {
-                const box = skill.querySelector('.skill-box');
-                const fill = skill.querySelector('.fill');
-                const percent = skill.dataset.percent;
-
-                skillTimeouts.push(setTimeout(() => {
-                    box.style.transform = 'translateX(0)';
-                    box.style.opacity = '1';
-                }, index * 350));
-
-                skillTimeouts.push(setTimeout(() => {
-                    box.style.width = '100%';
-                }, skills.length * 350 + index * 250));
-
-                skillTimeouts.push(setTimeout(() => {
-                    fill.style.width = percent + '%';
-                }, skills.length * 350 + index * 250 + 600));
-            });
-        }
-
-        function playBgVideo() {
-            const video = document.querySelector('.bg-video');
-            if (!video) return;
-
-            const playPromise = video.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                    console.log('Video play failed:', error);
-                });
-            }
-        }
-
-        /* ---------- radio navigation ---------- */
-        radios.forEach(radio => {
-            radio.addEventListener('change', function () {
-                const target = +this.getAttribute('c-option') - 1;
-                showStage(target);
-            });
-        });
-
-        /* ---------- mouse wheel ---------- */
-        window.addEventListener('wheel', e => {
-            e.preventDefault();
-            if (isTransitioning) return;
-
-            const dir = Math.sign(e.deltaY);
-            if (dir === 0) return;
-
-            const next = current + dir;
-            if (next < 0 || next >= stages.length) return;
-
-            showStage(next);
-        }, { passive: false });
-
-        /* ---------- touch ---------- */
-        /*        let startY = 0;
-                window.addEventListener('touchstart', e => {
-                    startY = e.touches[0].clientY;
-                });
-                window.addEventListener('touchend', e => {
-                    if (isTransitioning) return;
-        
-                    const delta = startY - e.changedTouches[0].clientY;
-                    if (Math.abs(delta) < 50) return;
-        
-                    const dir = delta > 0 ? 1 : -1;
-                    const next = current + dir;
-                    if (next < 0 || next >= stages.length) return;
-        
-                    showStage(next);
-                });
-        */
-        // شروع اولیه
-        showStage(current);
-
-    </script>
-
-    <!-- stage-3/script -->
-    <script>
-        let demoStarted = false;
-        let lastX = 0;
-        let lastY = 0;
-        let velocityX = 0;
-        let velocityY = 0;
-
-        function isMobile() {
-            return window.innerWidth < 768;
-        }
-
-
-        // ---------- اجرا فقط یک بار ----------
-        function startDemo() {
-            const messages = [
-                "من سینا فیروزیان هستم !",
-                `کسی که از ساختن، فکر کردن و تبدیل ایده به نتیجه لذت می‌برد.`,
-                "چیزی که برای من جذابه، روند خلق یک محصول از صفره!!",
-                "به کارهایی علاقه دارم که ذهن را درگیر می‌کنند",
-                "کارهایی که با تمرکز، دقت و کمی وسواس می‌شود آن‌ها را بهتر و بهتر کرد",
-                "متولد ۱۶ دی ۱۳۸۵ و زاده‌ی بهشهر هستم",
-                "مسیرم را با یادگیری مداوم و تجربه جلو می‌برم و سعی می‌کنم در هر پروژه، کیفیت و تمیزی اجرا را در اولویت قرار بدهم"
-            ];
-
-            const create = isMobile() ? createMessageMobile : createMessage;
-            let delay = 0;
-
-            messages.forEach((msg, i) => {
-                setTimeout(() => requestAnimationFrame(() => create(msg)), 1500 + i * 2000);
-            });
-        }
-
-
-
-
-        function isOverlapping(x, y, w, h, elements) {
-            return elements.some(el => {
-                const ex = el.offsetLeft;
-                const ey = el.offsetTop;
-                const ew = el.offsetWidth;
-                const eh = el.offsetHeight;
-
-                return !(
-                    x + w <= ex ||
-                    x >= ex + ew ||
-                    y + h <= ey ||
-                    y >= ey + eh
-                );
-            });
-        }
-
-
-
-        // ---------- ایجاد پیام ----------
-        function createMessage(text) {
-            const msg = document.createElement('div');
-            msg.className = 'draggable';
-            msg.style.position = 'absolute';
-            msg.style.opacity = '0';
-            msg.style.transition = 'opacity 1s ease';
-
-            const textEl = document.createElement('div');
-            textEl.className = 'message-text';
-            textEl.textContent = text;
-            msg.appendChild(textEl);
-
-            const meta = document.createElement('div');
-            meta.className = 'meta';
-            const now = new Date();
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            meta.innerHTML = `<span class="time">${hours}:${minutes}</span><span class="ticks sent">✔✔</span>`;
-            msg.appendChild(meta);
-
-            chatBody.appendChild(msg); // اضافه کردن قبل از گرفتن اندازه
-
-            const area = chatBody.getBoundingClientRect();
-            const SAFE = { left: 10, right: 10, top: 25, bottom: 25 };
-            const maxX = area.width - msg.offsetWidth - SAFE.right;
-            const maxY = area.height - msg.offsetHeight - SAFE.bottom;
-            const minX = SAFE.left;
-            const minY = SAFE.top;
-
-            const existingMessages = [...chatBody.querySelectorAll('.draggable')].filter(m => m !== msg);
-
-            let x, y, attempts = 0;
-            const MAX_ATTEMPTS = 100;
-
-            do {
-                x = Math.random() * (maxX - minX) + minX;
-                y = Math.random() * (maxY - minY) + minY;
-                attempts++;
-            } while (isOverlapping(x, y, msg.offsetWidth, msg.offsetHeight, existingMessages) && attempts < MAX_ATTEMPTS);
-
-            msg.style.left = x + 'px';
-            msg.style.top = y + 'px';
-
-            setTimeout(() => {
-                msg.style.opacity = '1';
-                const ticks = msg.querySelector('.ticks');
-                setTimeout(() => ticks.className = 'ticks delivered', 500);
-                setTimeout(() => ticks.className = 'ticks seen', 1200);
-            }, 50);
-
-            enableDrag(msg);
-        }
-
-        function createMessageMobile(text) {
-            const msg = document.createElement('div');
-            msg.className = 'draggable mobile-message';
-            msg.style.opacity = '0';
-            msg.style.transition = 'opacity 0.8s ease';
-
-            const textEl = document.createElement('div');
-            textEl.className = 'message-text';
-            textEl.textContent = text;
-            msg.appendChild(textEl);
-
-            const meta = document.createElement('div');
-            meta.className = 'meta';
-            const now = new Date();
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            meta.innerHTML = `<span class="time">${hours}:${minutes}</span><span class="ticks sent">✔✔</span>`;
-            msg.appendChild(meta);
-
-            chatBody.appendChild(msg);
-
-            setTimeout(() => {
-                msg.style.opacity = '1';
-                const ticks = msg.querySelector('.ticks');
-                setTimeout(() => ticks.className = 'ticks delivered', 500);
-                setTimeout(() => ticks.className = 'ticks seen', 1200);
-            }, 50);
-
-        }
-
-
-        // ---------- drag موس ----------
-        let activeDragEl = null;
-        let dragOffsetX = 0;
-        let dragOffsetY = 0;
-        let topZIndex = 1;
-
-        function enableDrag(el) {
-            el.addEventListener('mousedown', e => {
-                activeDragEl = el;
-                dragOffsetX = e.clientX - el.offsetLeft;
-                dragOffsetY = e.clientY - el.offsetTop;
-                lastX = e.clientX;
-                lastY = e.clientY;
-                velocityX = 0;
-                velocityY = 0;
-                el.style.cursor = 'grabbing';
-
-                topZIndex++;
-                el.style.zIndex = topZIndex;
-
-                e.preventDefault();
-            });
-        }
-
-        window.addEventListener('mousemove', e => {
-            if (!activeDragEl) return;
-
-            // محاسبه‌ی velocity درست
-            velocityX = e.clientX - lastX;
-            velocityY = e.clientY - lastY;
-
-            lastX = e.clientX;
-            lastY = e.clientY;
-
-            activeDragEl.style.left = (e.clientX - dragOffsetX) + 'px';
-            activeDragEl.style.top = (e.clientY - dragOffsetY) + 'px';
-        });
-
-        window.addEventListener('mouseup', e => {
-            if (!activeDragEl) return;
-
-
-            activeDragEl.style.cursor = 'grab';
-            activeDragEl = null;
-        });
-
-    </script>
-
-
+    <script src="/js/stages-scroll.js"></script>
+    <script src="/js/TypingEffect.js"></script>
+    <script src="/js/stage-2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>

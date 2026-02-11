@@ -32,7 +32,7 @@
         /* حالت اسم */
         height: 38px;
         max-width: 100%;
-        background: #222;
+        background: #ffffffd0;
         border-radius: 2rem;
         overflow: hidden;
         transform: translateX(-120px);
@@ -124,7 +124,7 @@
         width: clamp(420px, 40vw, 560px);
         /* کلیدی */
         padding: 60px 0 60px 40px;
-        background: #0e0e0e;
+        background: #0e0e0eea;
         display: flex;
         flex-direction: column;
         justify-content: center;
