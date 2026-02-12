@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +45,6 @@
         }
     </style>
 </head>
-
 <body>
     <fieldset class="switcher">
         <label class="switcher__option">
@@ -66,7 +64,6 @@
             <img class="icon-style" src="img/icon/social.png" alt="">
         </label>
     </fieldset>
-
     <!-- محتوای سکشن 1 -->
     <section class="stage stage-1 active header">
         <div class="head-glasses">
@@ -99,8 +96,6 @@
             </div>
         </div>
     </section>
-
-
     <!-- محتوای سکشن 2 -->
     <section id="about" class="stage stage-2 about">
         <video class="bg-video" loop muted playsinline>
@@ -111,85 +106,72 @@
             <div id="chatBody"></div>
         </div>
     </section>
-
-
-
     <!-- محتوای سکشن 3 -->
     <section id="stage-3" class="stage stage-3">
         <div class="layout">
-
             <!-- ستون چپ: مهارت‌ها -->
             <aside class="skills-area">
                 <section class="skills">
+                    <h3 class="mb-5  head-skill text-center">Qualifications</h3>
                     <div class="skill" data-percent="100">
                         <div class="skill-box">
                             <span class="skill-name">BootStrap</span>
                             <div class="fill"></div>
                         </div>
                     </div>
-
                     <div class="skill" data-percent="90">
                         <div class="skill-box">
                             <span class="skill-name">HTML</span>
                             <div class="fill"></div>
                         </div>
                     </div>
-
                     <div class="skill" data-percent="85">
                         <div class="skill-box">
                             <span class="skill-name">CSS</span>
                             <div class="fill"></div>
                         </div>
                     </div>
-
                     <div class="skill" data-percent="80">
                         <div class="skill-box">
                             <span class="skill-name">English</span>
                             <div class="fill"></div>
                         </div>
                     </div>
-
                     <div class="skill" data-percent="70">
                         <div class="skill-box">
                             <span class="skill-name">SQL</span>
                             <div class="fill"></div>
                         </div>
                     </div>
-
                     <div class="skill" data-percent="65">
                         <div class="skill-box">
                             <span class="skill-name">Django</span>
                             <div class="fill"></div>
                         </div>
                     </div>
-
                     <div class="skill" data-percent="55">
                         <div class="skill-box">
                             <span class="skill-name">Python</span>
                             <div class="fill"></div>
                         </div>
                     </div>
-
                     <div class="skill" data-percent="40">
                         <div class="skill-box">
                             <span class="skill-name">JavaScript</span>
                             <div class="fill"></div>
                         </div>
                     </div>
-
                     <div class="skill openmodal" data-percent="100" onclick="openModal()">
                         <div class="skill-box">
-                            <span id="skill-name" class="skill-name">نمونه کار و مدارک</span>
+                            <span id="skill-name" class="skill-name pt-2">نمونه کار و مدارک</span>
                             <div id="fill" class="fill ProjectCertificate"></div>
                         </div>
                     </div>
-
-
-                    <div id="fullModal" class="modal">
+                    <div class="modal">
                         <div class="modal-content">
                             <span class="close" onclick="closeModal()">×</span>
                             <h2>نمونه کارها</h2>
-
+                            <hr>
                             <div class="projects">
                                 <div class="project project-1">
                                     <div class="project-name">Explore</div>
@@ -202,20 +184,19 @@
                                 </div>
                             </div>
                             <hr>
-                            <h2 style="border-bottom: 1px solid; width:100px; margin-bottom:5%;padding-bottom:2%;">مدارک
-                            </h2>
-                            <div>چیزی یافت نشد!</div>
-                            </main>
+                            <div class="cert-title">
+                                <h2 class="text-center">مدارک
+                                </h2>
+                                <hr>
+                            </div>
+                            <div class="cert">چیزی یافت نشد!</div>
                         </div>
                     </div>
-
                 </section>
             </aside>
-
             <!-- ستون راست: نمونه کار -->
             <main class="right">
                 <h2>نمونه کارها</h2>
-
                 <div class="projects">
                     <div class="project  project-1">
                         <div class="project-name">Explore</div>
@@ -228,70 +209,21 @@
                     </div>
                 </div>
                 <hr>
-                <h2 style="border-bottom: 1px solid; width:100px; margin-bottom:5%;padding-bottom:2%;">مدارک</h2>
-                <div>چیزی یافت نشد!</div>
+                <div class="cert-title">
+                    <h2 class="text-center">مدارک
+                    </h2>
+                    <hr>
+                </div>
+                <div class="cert">چیزی یافت نشد!</div>
             </main>
         </div>
     </section>
-
+    <!-- محتوای سکشن 4 -->
     <section class="stage stage-4" style="overflow-y: auto;">
         <div class="main-wrapper">
-
-            <!-- بخش وسط (نوشتن کامنت) -->
-            <div class="comment-write" id="commentWrite" dir="rtl">
-                <h5 class="mb-3">نظر خودتو بنویس</h5>
-                <input type="text" class=" mb-2" placeholder="نام شما">
-                <textarea class="mb-2" rows="3" placeholder="نظر شما..."></textarea>
-                <button class="btn"></button>
-            </div>
-
-            <!-- پنل نمایش کامنت‌ها -->
-            <div class="comments-view" id="commentsView" dir="rtl">
-                <h5 class="mb-3">نظرات کاربران</h5>
-
-                <div class="comment-item">
-                    <h6>مقول:</h6>
-                    <p>عالی بود 👌</p>
-                </div>
-
-                <div class="comment-item">
-                    <h6>چنگیز:</h6>
-                    <p>طراحی تمیزه 🔥</p>
-                </div>
-
-                <div class="comment-item">
-                    <h6>تیمور:</h6>
-                    <p>طراحی تمیزه 🔥</p>
-                </div>
-
-                <div class="comment-item">
-                    <h6>هوشنگ:</h6>
-                    <p>طراحی تمیزه 🔥</p>
-                </div>
-
-                <div class="comment-item">
-                    <h6>اکبر:</h6>
-                    <p>طراحی تمیزه 🔥</p>
-                </div>
-
-                <div class="comment-item">
-                    <h6>اصفر:</h6>
-                    <p>طراحی تمیزه 🔥</p>
-                </div>
-
-                <div class="comment-item">
-                    <h6>کم اوردم:</h6>
-                    <p>طراحی تمیزه 🔥</p>
-                </div>
-            </div>
-
-
             <div class="links-container text-center" id="socialBox">
-
                 <h2>Find Me On 👇</h2>
-
                 <div class="links">
-
                     <div class="link">
                         <div class="txt">@Sinos60</div>
                         <img src="/img/icon/social/telegram.png" alt="">
@@ -317,78 +249,78 @@
                         <img src="/img/icon/social/gmail.png" alt="">
                     </div>
 
-                    <div class="link" id="toggleComments">
+                    <div class="link" id="toggleComments"
+                        style="background: rgb(0, 0, 0); color: white; box-shadow: none;">
                         <div class="txt">بازخورد و نظرات</div>
                         <img src="/img/icon/social/chat.png" alt="">
                     </div>
-
-
                 </div>
-
                 <div class="footer">
                     © 2026 – Sinos60 | تمامی حقوق محفوظ است
                 </div>
-
+            </div>
+            <!-- بخش وسط (نوشتن کامنت) -->
+            <div class="comment-write" id="commentWrite" dir="rtl">
+                <h5 class="mb-3">نظر خودتو بنویس</h5>
+                <input type="text" class=" mb-2" placeholder="نام شما">
+                <textarea class="mb-2" rows="3" placeholder="نظر شما..."></textarea>
+                <button class="btn"></button>
+            </div>
+            <!-- پنل نمایش کامنت‌ها -->
+            <div class="comments-view" id="commentsView" dir="rtl">
+                <h5 class="mb-3 text-center">نظرات کاربران</h5>
+                <div class="comment-item">
+                    <div class="comment-head">
+                        <h6>مقول:</h6>
+                        <strong>2026/12/2</strong>
+                    </div>
+                    <p>عالی بود 👌</p>
+                </div>
+                <div class="comment-item">
+                    <div class="comment-head">
+                        <h6>چنگیز:</h6>
+                        <strong>2026/12/2</strong>
+                    </div>
+                    <p>طراحی تمیزه 🔥</p>
+                </div>
+                <div class="comment-item">
+                    <div class="comment-head">
+                        <h6>تیمور:</h6>
+                        <strong>2026/12/2</strong>
+                    </div>
+                    <p>طراحی تمیزه 🔥</p>
+                </div>
+                <div class="comment-item">
+                    <div class="comment-head">
+                        <h6>هوشنگ:</h6>
+                        <strong>2026/12/2</strong>
+                    </div>
+                    <p>طراحی تمیزه 🔥</p>
+                </div>
+                <div class="comment-item">
+                    <div class="comment-head">
+                        <h6>اکبر:</h6>
+                        <strong>2026/12/2</strong>
+                    </div>
+                    <p>طراحی تمیزه 🔥</p>
+                </div>
+                <div class="comment-item">
+                    <div class="comment-head">
+                        <h6>اصفر:</h6>
+                        <strong>2026/12/2</strong>
+                    </div>
+                    <p>طراحی تمیزه 🔥</p>
+                </div>
+                <div class="comment-item">
+                    <div class="comment-head">
+                        <h6>کم اوردم:</h6>
+                        <strong>2026/12/2</strong>
+                    </div>
+                    <p>طراحی تمیزه 🔥</p>
+                </div>
             </div>
         </div>
     </section>
-    <script>
-        const toggleBtn = document.getElementById("toggleComments");
-        const commentsView = document.getElementById("commentsView");
-        const commentWrite = document.getElementById("commentWrite");
-        const socialBox = document.getElementById("socialBox");
-
-        toggleBtn.addEventListener("click", () => {
-            commentsView.classList.toggle("active");
-            commentWrite.classList.toggle("active");
-            socialBox.classList.toggle("shift");
-        });
-        // درگ برای scroll
-        let isDown = false;
-        let startY;
-        let scrollTop;
-
-        commentsView.addEventListener('mousedown', (e) => {
-            isDown = true;
-            startY = e.pageY - commentsView.offsetTop;
-            scrollTop = commentsView.scrollTop;
-            commentsView.style.cursor = 'grabbing';
-        });
-
-        commentsView.addEventListener('mouseleave', () => {
-            isDown = false;
-            commentsView.style.cursor = 'default';
-        });
-
-        commentsView.addEventListener('mouseup', () => {
-            isDown = false;
-            commentsView.style.cursor = 'default';
-        });
-
-        commentsView.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const y = e.pageY - commentsView.offsetTop;
-            const walk = (y - startY) * 1; // سرعت scroll، 1 برای طبیعی
-            commentsView.scrollTop = scrollTop - walk;
-        });
-
-        // touch devices
-        let startTouchY;
-        let startScrollTop;
-        commentsView.addEventListener('touchstart', (e) => {
-            startTouchY = e.touches[0].pageY;
-            startScrollTop = commentsView.scrollTop;
-        });
-
-        commentsView.addEventListener('touchmove', (e) => {
-            const y = e.touches[0].pageY;
-            const walk = (y - startTouchY);
-            commentsView.scrollTop = startScrollTop - walk;
-        });
-    </script>
-
-
     <!-- open modal stage-3 just in *>450px(controling on Css) -->
     <script>
         function openModal() {
@@ -396,13 +328,13 @@
             modal.style.display = 'block';
             setTimeout(() => modal.classList.add('active'), 10);
         }
-
         function closeModal() {
             const modal = document.querySelector('.modal');
             modal.classList.remove('active');
             setTimeout(() => modal.style.display = 'none', 500);
         }
     </script>
+    <script src="/js/stage-4.js"></script>
     <script src="/js/stages-scroll.js"></script>
     <script src="/js/TypingEffect.js"></script>
     <script src="/js/stage-2.js"></script>
@@ -410,5 +342,4 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
