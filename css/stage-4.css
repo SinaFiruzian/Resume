@@ -1,0 +1,295 @@
+.stage-4 {
+    background: linear-gradient(-90deg, #ff7300d7, #ffffff);
+}
+
+.links .link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f0f0;
+    padding: 12px 18px;
+    border-radius: 2rem;
+    margin-bottom: 15px;
+    transition: all .4s ease;
+    cursor: pointer;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.09);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.288), inset 0 0 20px 0 rgba(255, 255, 255, 0.548);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media(hover:hover) {
+    .links .link:hover {
+        box-shadow: 3px 8px 10px;
+        font-size: 25px;
+        background: rgba(255, 255, 255, 0.384);
+        transform: translateX(-20px) scale(1.1);
+        backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+}
+
+
+.link img {
+    width: 50px;
+    height: auto;
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 13px;
+    opacity: 0.7;
+    justify-content: space-between;
+}
+
+.main-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ===================== */
+/* سوشال - حالت اولیه وسط */
+/* ===================== */
+
+.links-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    padding: 30px 20px;
+    border-radius: 3rem;
+    transition: .6s cubic-bezier(.77, 0, .18, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.233), inset 0 0 20px rgba(255, 255, 255, 0.384);
+    background: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* وقتی فعال شد → بره راست */
+.links-container.shift {
+    transform: translate(200px, -50%);
+}
+
+/* ===================== */
+/* نمایش کامنت (چپ) */
+/* ===================== */
+
+.comments-view {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-500px, -50%) scale(0.8);
+    width: 300px;
+    height: 70vh;
+    padding: 20px;
+    opacity: 0;
+    transition: .6s ease;
+    pointer-events: none;
+    /* border-radius: 2rem; */
+    background: rgba(255, 255, 255, 0);
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+    pointer-events: none;
+    cursor: grab;
+    user-select: none;
+}
+
+.comments-view h5 {
+    border-bottom: 1px solid;
+    border-radius: .6rem;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+    width: 70%;
+    justify-self: center;
+    font-weight: 600;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.486);
+}
+
+.comments-view::-webkit-scrollbar {
+    width: 0;
+    /* Chrome, Safari, Opera */
+    height: 0;
+}
+
+.comments-view.active {
+    opacity: 1;
+    transform: translate(-500px, -50%) scale(1);
+    pointer-events: all;
+}
+
+/* ===================== */
+/* نوشتن کامنت (وسط) */
+/* ===================== */
+
+.comment-write {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 320px;
+    padding: 20px;
+    opacity: 0;
+    transition: .6s ease;
+    pointer-events: none;
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.61), inset 0 0 20px rgba(255, 255, 255, 0.144);
+}
+
+.comment-write input {
+    border: 1px solid rgba(0, 0, 0, 0.274);
+    border-radius: 1rem;
+    padding: 2%;
+    background: rgba(255, 255, 255, 0.212);
+    outline: none;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.13); */
+}
+
+.comment-write textarea {
+    width: 100%;
+    resize: none;
+    border: 1px solid rgba(0, 0, 0, 0.274);
+    border-radius: 1rem;
+    padding: 2%;
+    background: rgba(255, 255, 255, 0.212);
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+}
+
+.comment-write.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: all;
+}
+
+.comment-item {
+    background: rgba(255, 255, 255, 0.253);
+    padding: 10px;
+    border-radius: 2rem;
+    margin-bottom: 10px;
+    font-size: 14px;
+    pointer-events: none;
+    user-select: none;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.699);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.comment-head {
+    display: flex;
+    background: rgba(255, 255, 255, 0.178);
+    padding: 2% 5% 0 5%;
+    border-radius: 2rem;
+    border: 1px solid #00000042;
+    padding-right: 5%;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.comment-item p {
+    margin-top: 5%;
+}
+
+.btn {
+    position: absolute;
+    left: 20px;
+    bottom: 40px;
+    border: none;
+    border-radius: 1rem;
+    padding: 2%;
+    background-image: url("/img/icon/send.png");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    rotate: 180deg;
+    outline: none;
+    transition: transform .6s ease;
+}
+
+.btn:hover {
+    transform: rotate(30deg);
+}
+
+@media (max-width: 768px) {
+    .links .link:hover {
+        box-shadow: 0 0 10px gray;
+        font-size: 22px;
+        background: rgba(255, 255, 255, 0.384);
+        transform: translateX(0px);
+    }
+
+    .main-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        /* padding-top: 20px; */
+        gap: 20px;
+        height: 100vh;
+        overflow-y: auto;
+    }
+
+    /* حذف absolute و transform */
+    .links-container,
+    .comments-view,
+    .comment-write {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none !important;
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
+        transition: all 1s ease;
+    }
+
+    .txt {
+        transition: all 1s ease;
+    }
+
+    .comments-view {
+        margin-bottom: 50%;
+    }
+
+
+    .links-container {
+        margin-top: 60%;
+    }
+
+    /* حالت اولیه مخفی - height 0 و opacity 0 */
+    .comments-view,
+    .comment-write {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    /* وقتی فعال شدن */
+    .comments-view.active,
+    .comment-write.active {
+        height: auto;
+        /* اجازه بده طبیعی باز بشه */
+        opacity: 1;
+        overflow: visible;
+    }
+
+    /* سوشال همیشه بالا */
+    .links-container.shift {
+        /* order: ; */
+        /* بالاترین بخش */
+        transition: all 1s ease;
+    }
+
+}

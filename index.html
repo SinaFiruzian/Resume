@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سینا فیروزیان | رزومه</title>
+    <meta name="description"
+        content="رزومه رسمی سینا فیروزیان؛ معرفی سوابق کاری، مهارت‌ها، پروژه‌ها و راه‌های ارتباطی.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/iranian-sans">
+    <link rel="stylesheet" href="/css/navigations.css">
+    <link rel="stylesheet" href="/css/stage-1.css">
+    <link rel="stylesheet" href="/css/stage-2.css">
+    <link rel="stylesheet" href="/css/stage-3.css">
+    <link rel="stylesheet" href="/css/stage-4.css">
+    <style>
+        body {
+            font-family: 'Iranian Sans';
+            font-style: normal;
+            font-weight: 800;
+            src: local('Iranian Sans'), url('https://fonts.cdnfonts.com/s/19710/irsans.woff') format('woff');
+        }
+
+
+        .stage {
+            position: fixed;
+            inset: 0;
+            opacity: 0;
+            transform: scale(1.2);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .stage.active {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        .stage {
+            will-change: opacity, transform;
+
+            transition: opacity .4s ease-in-out, transform .6s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <fieldset class="switcher">
+        <label class="switcher__option">
+            <input class="switcher__input" type="radio" name="theme" c-option="1" checked />
+            <img class="icon-style" src="img/icon/home.png" alt="">
+        </label>
+        <label class="switcher__option">
+            <input class="switcher__input" type="radio" name="theme" c-option="2" />
+            <img class="icon-style" src="img/icon/aboutMeLogo.png" alt="">
+        </label>
+        <label class="switcher__option">
+            <input class="switcher__input" type="radio" name="theme" c-option="3" />
+            <img class="icon-style" src="img/icon/skill.png" alt="">
+        </label>
+        <label class="switcher__option">
+            <input class="switcher__input" type="radio" name="theme" c-option="4" />
+            <img class="icon-style" src="img/icon/social.png" alt="">
+        </label>
+    </fieldset>
+    <!-- محتوای سکشن 1 -->
+    <section class="stage stage-1 active header">
+        <div class="head-glasses">
+            <svg class="caption-svg" viewBox="0 0 350 200" preserveAspectRatio="xMidYMid meet">
+                <path id="text-curve" d="M 0 160 A 160 160 0 0 1 300 160" fill="transparent" />
+                <text font-size="25" fill="#333">
+                    <textPath id="typing-text" href="#text-curve" startOffset="50%" text-anchor="middle">
+                    </textPath>
+                </text>
+            </svg>
+            <img src="img/Sinos60!.jpg" alt="" loading="lazy">
+            <div class="caption">
+                <div class="name glass-caption">
+                    <h1>سینا فیروزیان</h1>
+                </div>
+            </div>
+            <!-- دسکتاپ -->
+            <div class="scroll-hint desktop">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow"></div>
+            </div>
+
+            <!-- موبایل -->
+            <div class="scroll-hint mobile">
+                <div class="scroll-hand"></div>
+            </div>
+        </div>
+    </section>
+    <!-- محتوای سکشن 2 -->
+    <section id="about" class="stage stage-2 about">
+        <video class="bg-video" loop muted playsinline>
+            <source src="/img/stage-2/stage-2.webm" type="video/webm">
+        </video>
+        <div class="stage-2-content">
+            <h3>پیام را بکشید و جابه‌جا کنید</h3>
+            <div id="chatBody"></div>
+        </div>
+    </section>
+    <!-- محتوای سکشن 3 -->
+    <section id="stage-3" class="stage stage-3">
+        <div class="layout">
+            <!-- ستون چپ: مهارت‌ها -->
+            <aside class="skills-area">
+                <section class="skills">
+                    <h3 class="mb-5  head-skill text-center">Qualifications</h3>
+                    <div class="skill" data-percent="100">
+                        <div class="skill-box">
+                            <span class="skill-name">BootStrap</span>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    <div class="skill" data-percent="90">
+                        <div class="skill-box">
+                            <span class="skill-name">HTML</span>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    <div class="skill" data-percent="85">
+                        <div class="skill-box">
+                            <span class="skill-name">CSS</span>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    <div class="skill" data-percent="80">
+                        <div class="skill-box">
+                            <span class="skill-name">English</span>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    <div class="skill" data-percent="70">
+                        <div class="skill-box">
+                            <span class="skill-name">SQL</span>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    <div class="skill" data-percent="65">
+                        <div class="skill-box">
+                            <span class="skill-name">Django</span>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    <div class="skill" data-percent="55">
+                        <div class="skill-box">
+                            <span class="skill-name">Python</span>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    <div class="skill" data-percent="40">
+                        <div class="skill-box">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    <div class="skill openmodal" data-percent="100" onclick="openModal()">
+                        <div class="skill-box">
+                            <span id="skill-name" class="skill-name pt-2">نمونه کار و مدارک</span>
+                            <div id="fill" class="fill ProjectCertificate"></div>
+                        </div>
+                    </div>
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal()">×</span>
+                            <h2>نمونه کارها</h2>
+                            <hr>
+                            <div class="projects">
+                                <div class="project project-1">
+                                    <div class="project-name">Explore</div>
+                                </div>
+                                <div class="project project-2">
+                                    <div class="project-name">music-pg</div>
+                                </div>
+                                <div class="project project-3">
+                                    <div class="project-name">panel</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="cert-title">
+                                <h2 class="text-center">مدارک
+                                </h2>
+                                <hr>
+                            </div>
+                            <div class="cert">چیزی یافت نشد!</div>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+            <!-- ستون راست: نمونه کار -->
+            <main class="right">
+                <h2>نمونه کارها</h2>
+                <div class="projects">
+                    <div class="project  project-1">
+                        <div class="project-name">Explore</div>
+                    </div>
+                    <div class="project  project-2">
+                        <div class="project-name">music-pg</div>
+                    </div>
+                    <div class="project project-3">
+                        <div class="project-name">panel</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="cert-title">
+                    <h2 class="text-center">مدارک
+                    </h2>
+                    <hr>
+                </div>
+                <div class="cert">چیزی یافت نشد!</div>
+            </main>
+        </div>
+    </section>
+    <!-- محتوای سکشن 4 -->
+    <section class="stage stage-4" style="overflow-y: auto;">
+        <div class="main-wrapper">
+            <div class="links-container text-center" id="socialBox">
+                <h2>Find Me On 👇</h2>
+                <div class="links">
+                    <div class="link">
+                        <div class="txt">@Sinos60</div>
+                        <img src="/img/icon/social/telegram.png" alt="">
+                    </div>
+                    <div class="link">
+                        <div class="txt">Instagram</div>
+                        <img src="/img/icon/social/instagram.png" alt="">
+                    </div>
+                    <div class="link">
+                        <div class="txt">GitHub</div>
+                        <img src="/img/icon/social/github.png" alt="">
+                    </div>
+                    <div class="link">
+                        <div class="txt">09018894512</div>
+                        <img src="/img/icon/social/call.png" alt="">
+                    </div>
+                    <div class="link">
+                        <div class="txt">firuziansina@gmail.com</div>
+                        <img src="/img/icon/social/gmail.png" alt="">
+                    </div>
+                    <div class="link" id="toggleComments"
+                        style="background: rgb(0, 0, 0); color: white; box-shadow: none;">
+                        <div class="txt">بازخورد و نظرات</div>
+                        <img src="/img/icon/social/chat.png" alt="">
+                    </div>
+                </div>
+                <div class="footer">
+                    © 2026 – Sinos60 | تمامی حقوق محفوظ است
+                </div>
+            </div>
+            <!-- بخش وسط (نوشتن کامنت) -->
+            <div class="comment-write" id="commentWrite" dir="rtl">
+                <h5 class="mb-3">نظر خودتو بنویس</h5>
+                <input type="text" id="name" class=" mb-2" placeholder="نام شما">
+                <textarea id="message" class="mb-2" rows="3" placeholder="نظر شما..."></textarea>
+                <button id="sendComment" class="btn" type="submit"></button>
+            </div>
+            <!-- پنل نمایش کامنت‌ها -->
+            <div class="comments-view" id="commentsView" dir="rtl">
+                <h5 class="mb-3 text-center">نظرات کاربران</h5>
+                <div class="comment-item">
+                    <div class="comment-head">
+                        <h6>مقول:</h6>
+                        <strong>2026/12/2</strong>
+                    </div>
+                    <p>عالی بود 👌</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- api for comment -->
+    <script>
+        const API = "https://resume-comments-api.sina-fzn1400.workers.dev/"; // آدرس Worker خودت
+        const slug = window.location.pathname;
+        async function loadComments() {
+            const res = await fetch(`${API}?slug=${slug}`);
+            const data = await res.json();
+            const container = document.getElementById("commentsView");
+            container.querySelectorAll(".comment-item").forEach(e => e.remove());
+            data.forEach(c => {
+                const item = document.createElement("div");
+                item.classList.add("comment-item");
+                item.innerHTML = `
+      <div class="comment-head">
+        <h6>${c.name}:</h6>
+        <strong>${new Date(c.created_at).toLocaleDateString('fa-IR')}</strong>
+      </div>
+      <p>${c.message}</p>
+    `;
+                container.appendChild(item);
+            });
+        }
+        document.getElementById("sendComment").addEventListener("click", async (e) => {
+            e.preventDefault();
+            const name = document.getElementById("name").value.trim();
+            const message = document.getElementById("message").value.trim();
+            if (!name || !message) return alert("لطفاً نام و پیام را وارد کنید.");
+            await fetch(API, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ slug, name, message })
+            });
+            document.getElementById("name").value = "";
+            document.getElementById("message").value = "";
+            loadComments();
+        });
+        loadComments();
+    </script>
+    <!-- open modal stage-3 just in *>450px(controling on Css) -->
+    <script>
+        function openModal() {
+            const modal = document.querySelector('.modal');
+            modal.style.display = 'block';
+            setTimeout(() => modal.classList.add('active'), 10);
+        }
+        function closeModal() {
+            const modal = document.querySelector('.modal');
+            modal.classList.remove('active');
+            setTimeout(() => modal.style.display = 'none', 500);
+        }
+    </script>
+    <script src="/js/stage-4.js"></script>
+    <script src="/js/stages-scroll.js"></script>
+    <script src="/js/TypingEffect.js"></script>
+    <script src="/js/stage-2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>
