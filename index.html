@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,8 +44,14 @@
 
             transition: opacity .4s ease-in-out, transform .6s ease-in-out;
         }
+
+        .link-socials {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
     </style>
 </head>
+
 <body>
     <fieldset class="switcher">
         <label class="switcher__option">
@@ -222,26 +229,36 @@
             <div class="links-container text-center" id="socialBox">
                 <h2>Find Me On 👇</h2>
                 <div class="links">
-                    <div class="link">
-                        <div class="txt">@Sinos60</div>
-                        <img src="/img/icon/social/telegram.png" alt="">
-                    </div>
-                    <div class="link">
-                        <div class="txt">Instagram</div>
-                        <img src="/img/icon/social/instagram.png" alt="">
-                    </div>
-                    <div class="link">
-                        <div class="txt">GitHub</div>
-                        <img src="/img/icon/social/github.png" alt="">
-                    </div>
-                    <div class="link">
-                        <div class="txt">09018894512</div>
-                        <img src="/img/icon/social/call.png" alt="">
-                    </div>
-                    <div class="link">
-                        <div class="txt">firuziansina@gmail.com</div>
-                        <img src="/img/icon/social/gmail.png" alt="">
-                    </div>
+                    <a class="link-socials" href="https://t.me/Sinos60" target="_blank">
+                        <div class="link">
+                            <div class="txt">@Sinos60</div>
+                            <img src="/img/icon/social/telegram.png" alt="">
+                        </div>
+                    </a>
+                    <a class="link-socials" href="https://www.instagram.com/sina._.firuzian/" target="_blank">
+                        <div class="link">
+                            <div class="txt">sina._.firuzian</div>
+                            <img src="/img/icon/social/instagram.png" alt="">
+                        </div>
+                    </a>
+                    <a class="link-socials" href="https://github.com/sinafiruzian" target="_blank">
+                        <div class="link">
+                            <div class="txt">GitHub</div>
+                            <img src="/img/icon/social/github.png" alt="">
+                        </div>
+                    </a>
+                    <a class="link-socials" href="tel:09018894512">
+                        <div class="link">
+                            <div class="txt">09018894512</div>
+                            <img src="/img/icon/social/call.png" alt="">
+                        </div>
+                    </a>
+                    <a class="link-socials" href="mailto:firuziansina@gmail.com">
+                        <div class="link">
+                            <div class="txt">firuziansina@gmail.com</div>
+                            <img src="/img/icon/social/gmail.png" alt="">
+                        </div>
+                    </a>
                     <div class="link" id="toggleComments"
                         style="background: rgb(0, 0, 0); color: white; box-shadow: none;">
                         <div class="txt">بازخورد و نظرات</div>
@@ -255,7 +272,8 @@
             <!-- بخش وسط (نوشتن کامنت) -->
             <div class="comment-write" id="commentWrite" dir="rtl">
                 <h5 class="mb-3">نظر خودتو بنویس</h5>
-                <input type="text" id="name" class=" mb-2" placeholder="نام شما">
+                <input type="text" id="name" class="mb-2" placeholder="نام شما">
+                <input type="email" class="mb-2" id="email" name="email" placeholder="ایمیل شما">
                 <textarea id="message" class="mb-2" rows="3" placeholder="نظر شما..."></textarea>
                 <button id="sendComment" class="btn" type="submit"></button>
             </div>
@@ -264,49 +282,75 @@
                 <h5 class="mb-3 text-center">نظرات کاربران</h5>
                 <div class="comment-item">
                     <div class="comment-head">
-                        <h6>مقول:</h6>
-                        <strong>2026/12/2</strong>
+                        <h6></h6>
+                        <strong></strong>
                     </div>
-                    <p>عالی بود 👌</p>
+                    <p>هنوز نظری ثبت نشده است.</p>
                 </div>
             </div>
         </div>
     </section>
     <!-- api for comment -->
     <script>
-        const API = "https://resume-comments-api.sina-fzn1400.workers.dev/"; // آدرس Worker خودت
-        const slug = window.location.pathname;
+        const API = "https://resume-comments-api.sina-fzn1400.workers.dev/";
         async function loadComments() {
-            const res = await fetch(`${API}?slug=${slug}`);
+            const res = await fetch(API);
             const data = await res.json();
             const container = document.getElementById("commentsView");
+
+            // حذف کامنت‌های قبلی به جز عنوان
             container.querySelectorAll(".comment-item").forEach(e => e.remove());
+
+            if (data.length === 0) {
+                // اگر دیتابیس خالی است، پیام پیش‌فرض نشان داده شود
+                const item = document.createElement("div");
+                item.classList.add("comment-item");
+                item.innerHTML = `
+            <div class="comment-head">
+                <h6></h6>
+                <strong></strong>
+            </div>
+            <p>هنوز نظری ثبت نشده است.</p>
+        `;
+                container.appendChild(item);
+                return;
+            }
+
             data.forEach(c => {
                 const item = document.createElement("div");
                 item.classList.add("comment-item");
                 item.innerHTML = `
-      <div class="comment-head">
-        <h6>${c.name}:</h6>
-        <strong>${new Date(c.created_at).toLocaleDateString('fa-IR')}</strong>
-      </div>
-      <p>${c.message}</p>
-    `;
+            <div class="comment-head">
+                <h6>${c.name}:</h6>
+                <strong>${new Date(c.created_at).toLocaleDateString('fa-IR')}</strong>
+            </div>
+            <p>${c.message}</p>
+        `;
                 container.appendChild(item);
             });
         }
         document.getElementById("sendComment").addEventListener("click", async (e) => {
             e.preventDefault();
             const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
             const message = document.getElementById("message").value.trim();
-            if (!name || !message) return alert("لطفاً نام و پیام را وارد کنید.");
-            await fetch(API, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ slug, name, message })
-            });
-            document.getElementById("name").value = "";
-            document.getElementById("message").value = "";
-            loadComments();
+            if (!name || !email || !message) return alert("لطفاً همه فیلدها را پر کنید.");
+            try {
+                const response = await fetch(API, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ name, email, message })
+                });
+                const result = await response.json();
+                if (result.error) return alert("خطا: " + result.error);
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("message").value = "";
+
+                loadComments();
+            } catch (err) {
+                alert("ارسال کامنت با خطا مواجه شد: " + err.message);
+            }
         });
         loadComments();
     </script>
@@ -331,4 +375,5 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
