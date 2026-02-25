@@ -15,8 +15,6 @@
     overflow: hidden;
     background: rgba(255, 255, 255, 0.09);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.288), inset 0 0 20px 0 rgba(255, 255, 255, 0.548);
-    backdrop-filter: blur(3.7px);
-    -webkit-backdrop-filter: blur(3.7px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -26,9 +24,6 @@
         font-size: 25px;
         background: rgba(255, 255, 255, 0.384);
         transform: translateX(-20px) scale(1.1);
-        backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
     }
 }
 
@@ -66,7 +61,6 @@
     transition: .6s cubic-bezier(.77, 0, .18, 1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.233), inset 0 0 20px rgba(255, 255, 255, 0.384);
     background: rgba(255, 255, 255, 0.09);
-    backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
