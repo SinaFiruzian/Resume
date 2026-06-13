@@ -1,0 +1,212 @@
+ #about h3 {
+     pointer-events: none;
+ }
+
+ @media (max-width: 650px) {
+
+     #about h3 {
+         display: none;
+     }
+ }
+
+ @media (min-width:651px) {
+
+     #about h3 {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         display: flex;
+         justify-self: center;
+         animation: notif 3s ease infinite;
+     }
+
+     @keyframes notif {
+         0% {
+             opacity: 0.1;
+         }
+
+         50% {
+             opacity: .6;
+         }
+
+         100% {
+             opacity: 0.1;
+         }
+     }
+
+     #chatBody {
+         width: 100%;
+         height: 50vh;
+     }
+
+     .stage-2 .stage-2-content {
+         backdrop-filter: blur(2px);
+         -webkit-backdrop-filter: blur(2px);
+     }
+
+ }
+
+ #about {
+     color: #fff;
+     background-repeat: no-repeat;
+     font-size: 25px;
+     direction: rtl;
+     background-size: cover;
+     width: 100%;
+     height: 100vh;
+     align-items: center;
+     justify-content: center;
+ }
+
+
+ #about::before {
+     will-change: backdrop-filter;
+ }
+
+ @media (min-width: 1370px) {
+     #about {
+         font-size: 55px;
+
+     }
+ }
+
+ @media (max-width: 768px) {
+     #about::before {
+         backdrop-filter: none;
+         -webkit-backdrop-filter: none;
+     }
+ }
+
+ #chatBody {
+     width: 100%;
+     height: 100vh;
+
+ }
+
+ .draggable {
+     padding: 10px 14px 30px 14px;
+     border-radius: 30px;
+     border-bottom-right-radius: 4px;
+     max-width: 35%;
+     height: auto;
+     align-self: flex-start;
+     font-family: "Iranian Sans";
+     line-height: 1.5;
+     position: relative;
+     word-wrap: break-word;
+     font-size: 17px;
+     background-color: rgba(253, 243, 229, 0.473);
+     color: #1f1300;
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.445);
+     backdrop-filter: blur(7.4px);
+     -webkit-backdrop-filter: blur(7.4px);
+     border: 2px solid rgba(0, 0, 0, 0.24);
+     color: #000000;
+     position: absolute;
+     cursor: grab;
+     transition: all 0.4s ease-out;
+     opacity: 0;
+     transform: translateY(20px) scale(0.8);
+     user-select: none;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     z-index: 10;
+ }
+
+ .draggable:active {
+     cursor: grabbing;
+ }
+
+ .meta {
+     direction: ltr;
+     position: absolute;
+     bottom: 4px;
+     right: 15px;
+     display: flex;
+     align-items: center;
+     gap: 4px;
+     font-size: 15px;
+     color: #ffffffc0;
+     user-select: none;
+ }
+
+ @media (max-width: 768px) {
+     #chatBody {
+         display: flex;
+         flex-direction: column;
+         gap: 0px;
+         margin-right: -15px;
+
+     }
+
+     .mobile-message {
+         margin-top: 5px;
+         position: relative !important;
+         max-width: 100%;
+         align-self: flex-start;
+         align-items: flex-start
+     }
+ }
+
+
+ @media (max-width: 450px) {
+     .mobile-message {
+         margin-top: -25px;
+         margin-bottom: 20px;
+         position: relative !important;
+         max-width: 102%;
+         align-self: flex-start;
+         font-size: 60%;
+     }
+ }
+
+ .ticks {
+     letter-spacing: -6px;
+     font-weight: bold;
+     color: #9e9e9e;
+ }
+
+ .ticks.sent {
+     color: #9e9e9e;
+ }
+
+ .ticks.delivered {
+     color: #9e9e9e;
+ }
+
+ .ticks.seen {
+     color: #34b7f1;
+ }
+
+ .draggable {
+     will-change: transform, left, top;
+ }
+
+ .stage-2 {
+     position: relative;
+     overflow: hidden;
+ }
+
+ .bg-video {
+     position: absolute;
+     inset: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     z-index: 0;
+ }
+
+ @media (max-width: 768px) {
+     .bg-video {
+         object-position: 40% center; 
+     }
+ }
+
+ .stage-2-content {
+     position: relative;
+     z-index: 1;
+     height: 100%;
+     padding: 24px;
+     color: #fff;
+ }

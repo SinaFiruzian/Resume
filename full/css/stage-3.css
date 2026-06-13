@@ -1,0 +1,377 @@
+    #stage-3 {
+        font-size: 32px;
+        /* background-size: cover; */
+        color: #fff;
+        font-size: 25px;
+        direction: rtl;
+        background-image: url("/img/stage-3/stage-3.jpg");
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+    }
+
+    #stage-3::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.329), rgba(0, 0, 0, 0));
+        pointer-events: none;
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        z-index: -1;
+    }
+
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+        margin-right: 60px;
+    }
+
+    .skill {
+        margin-bottom: 8%;
+    }
+
+    .skill-box {
+        position: relative;
+        width: 70px;
+        height: 45px;
+        max-width: 100%;
+        background: #00000027;
+        border-radius: 2rem;
+        box-shadow: inset 0 0 10px black;
+        overflow: hidden;
+        transform: translateX(-120px);
+        opacity: 0;
+        transition:
+            transform 0.6s ease,
+            opacity 0.6s ease,
+            width 0.6s ease;
+        margin-bottom: -15px;
+    }
+
+    .skill-name {
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        color: #00000096;
+        font-size: 20px;
+        font-weight: 600;
+        padding-left: 12px;
+        line-height: 28px;
+        white-space: nowrap;
+    }
+
+    .fill {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0;
+        background: linear-gradient(90deg, #fd3b21, #ff9900);
+        transition: width 1s ease;
+        z-index: 1;
+        border-radius: 2rem;
+    }
+
+    .right {
+        padding: 60px;
+        color: #0e0e0e;
+    }
+
+
+    .layout {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    .skills-area {
+        width: 35rem;
+        padding: 85px 0 60px 40px;
+        background: #ffffff11;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        border-radius: 2rem;
+        height: 95vh;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.521), inset 0 0 20px rgba(255, 224, 224, 0.466);
+        margin: 3% 5%;
+        border: 1px solid rgba(0, 0, 0, 0.096);
+    }
+
+    .openmodal {
+        display: none;
+    }
+
+    .modal {
+        position: fixed;
+        z-index: 9999;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all .6s ease;
+    }
+
+    .modal.active {
+        opacity: 1;
+    }
+
+    .modal-content {
+        background: #fff;
+        background: linear-gradient(10deg, #ff8a2b, #ffffffa2);
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+        position: relative;
+    }
+
+    .modal-content h2 {
+        width: 130px;
+        padding: 2%;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 5%;
+        border-radius: 2rem;
+        box-shadow: inset 0 0px 5px;
+    }
+
+    .right h2 {
+        width: 180px;
+        padding: 1%;
+        font-weight: 600;
+        font-size: 25px;
+        margin-bottom: -2%;
+        border-radius: 2rem;
+        text-align: center;
+        box-shadow: inset 0 0px 5px;
+    }
+
+    .modal-content hr:first-of-type {
+        width: 50%;
+        margin: 0;
+    }
+
+    .close {
+        position: absolute;
+        top: 0px;
+        left: 20px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    .projects {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 8%;
+        margin-top: 8%;
+    }
+
+    .project {
+        background: rgb(20, 20, 20);
+        background-image: url("/img/stage-3/deep-stage-3.jpg");
+        background-size: cover;
+        border-radius: 2rem;
+        height: 10rem;
+        width: 10rem;
+        box-shadow: 10px 8px 20px 0px rgba(0, 0, 0, 0.397), inset 0px 0px 10px rgba(255, 245, 245, 0.459);
+        transition: transform .6s ease;
+        display: flex;
+        align-content: center;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+    }
+
+    .project-name {
+        background: #22222281;
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.075);
+        display: flex;
+        border-radius: 0 0 2rem 2rem;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 5%;
+        pointer-events: none;
+        color: white;
+
+    }
+
+    .cert-title h2 {
+        width: 100px;
+        font-weight: 600;
+        margin-bottom: 5%;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 2rem;
+        box-shadow: inset 0 0px 5px;
+    }
+
+    .cert-title hr {
+        width: 50%;
+    }
+
+    .cert {
+        opacity: .7;
+    }
+
+    @media (hover: hover) {
+
+
+        .project:hover {
+            transform: scale(1.2);
+            animation: rotate .6s ease-in-out infinite alternate;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: scale(1.2) rotate(5deg);
+            }
+
+            100% {
+                transform: scale(1.2) rotate(-5deg);
+            }
+        }
+    }
+
+
+    .project-1 {
+        background: url("/img/stage-3/Explore.png");
+        background-size: cover;
+    }
+
+    .project-2 {
+        background: url("/img/stage-3/nusic-pg.png");
+        background-size: cover;
+    }
+
+    .project-3 {
+        background: url("/img/stage-3/panel.png");
+        background-size: cover;
+        box-shadow: 10px 8px 20px 0px rgba(0, 0, 0, 0.315), inset 0px 0px 10px rgb(0, 0, 0);
+    }
+
+    .head-skill {
+        position: relative;
+        font-size: 30px;
+        font-weight: 600;
+        background: rgba(255, 255, 255, 0.116);
+        color: #0e0e0e;
+        border-radius: 2rem;
+        padding: 2%;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.555);
+    }
+
+    @media (max-width: 900px) {
+        .openmodal {
+            display: block;
+        }
+
+        .right {
+            display: none;
+        }
+
+        .skills {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            margin-right: 20px;
+            margin-top: -30%;
+        }
+
+        .fill {
+            box-shadow: none;
+        }
+
+        .ProjectCertificate {
+            background: linear-gradient(90deg, #ff1e00, rgb(253, 135, 0), #ff1e00);
+        }
+
+        .skill-box {
+            box-shadow: none;
+        }
+
+        .layout {
+            grid-template-columns: 1fr;
+        }
+
+        .left {
+            border-bottom: 1px solid #222;
+        }
+
+        .skills-area {
+            width: 100%;
+            max-width: 400px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+            border-radius: 0;
+            height: 100vh;
+            box-shadow: inset 0 0 0 rgba(255, 224, 224, 0);
+            margin: 0;
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
+            background: rgba(255, 0, 0, 0);
+            border: none;
+        }
+
+        .skill {
+            margin-left: 10%;
+        }
+
+        .head-skill {
+            position: absolute;
+            top: 70px;
+            font-size: 30px;
+            width: 90%;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.116);
+            border-radius: 2rem;
+            padding: 2%;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.555);
+        }
+
+        #skill-name {
+            text-align: center;
+            justify-self: anchor-center;
+        }
+
+        #stage-3::after {
+            content: none;
+        }
+
+        .projects {
+            display: flex;
+            justify-items: center;
+            margin: 8% auto;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project {
+            box-sizing: border-box;
+            height: 8rem;
+            width: 8rem;
+        }
+
+    }
+
+    @media (max-height: 745px) {
+        .skills {
+            margin-top: 10px;
+        }
+
+        .skill {
+            margin-top: -10px;
+            margin-right: 20px;
+        }
+
+    }

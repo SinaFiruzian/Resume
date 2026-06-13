@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رزومه</title>
+    <meta name="description"
+        content="رزومه رسمی سینا فیروزیان؛ معرفی سوابق کاری، مهارت‌ها، پروژه‌ها و راه‌های ارتباطی.">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0f;
+            --page-bg: #13131a;
+            --accent: #c8a96e;
+            --accent2: #7c6fff;
+            --text: #e8e8f0;
+            --muted: #666680;
+            --border: rgba(200, 169, 110, 0.15);
+            --page-w: min(860px, 95vw);
+            --gap: clamp(30px, 5vw, 80px);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* ── SCROLLING TRACK ── */
+        #scroll-track {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: clamp(40px, 8vw, 120px) 16px;
+            gap: var(--gap);
+        }
+
+        /* ── CONNECTOR LINE ── */
+        #scroll-track::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, var(--accent) 10%, var(--accent) 90%, transparent);
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        /* ── PAGE CARD ── */
+        .page-card {
+            width: var(--page-w);
+            background: var(--page-bg);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            transform-origin: top center;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.5s ease,
+                box-shadow 0.5s ease;
+            will-change: transform, opacity;
+            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 451px) {
+            .page-card {
+                width: var(--page-w);
+                background: var(--page-bg);
+                border: 1px solid var(--border);
+                border-radius: 18px;
+                overflow: hidden;
+                position: relative;
+                transform-origin: center;
+                transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                    opacity 0.5s ease, margin-bottom 0.5s ease,
+                    box-shadow 0.5s ease;
+                will-change: transform, opacity;
+                box-shadow: 0 4px 40px rgba(0, 0, 0, 0.4);
+                margin-top: 40%;
+            }
+
+            .page-card.is-past {
+                transform: scale(0.88) translateY(-20px);
+                opacity: 0.3;
+                margin-bottom: -40%;
+            }
+        }
+
+        .page-card.is-active {
+            box-shadow: 0 8px 80px rgba(200, 169, 110, 0.12), 0 0 0 1px rgba(200, 169, 110, 0.25);
+            border-color: rgba(200, 169, 110, 0.3);
+        }
+
+        .page-card.is-next {
+            opacity: 0.3;
+            transform: translateY(50px);
+        }
+
+        .page-card.is-past {
+            transform: scale(0.88) translateY(-20px);
+            opacity: 0.3;
+        }
+
+        /* Page number badge */
+        .page-num {
+            position: absolute;
+            top: 20px;
+            left: 24px;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            color: var(--muted);
+            text-transform: uppercase;
+        }
+
+        /* ─────────────────────────────────────────
+     PAGE CONTENTS
+  ───────────────────────────────────────── */
+
+        /* === PAGE 1: HERO === */
+        .page-hero {
+            padding: clamp(48px, 8vw, 90px) clamp(28px, 6vw, 72px);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 32px;
+            align-items: start;
+        }
+
+        @media(max-width:560px) {
+            .page-hero {
+                /* grid-template-columns: 1fr; */
+                align-items: center;
+            }
+        }
+
+        .hero-name {
+            font-size: clamp(32px, 6vw, 72px);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            color: var(--text);
+        }
+
+        .hero-name span {
+            color: var(--accent);
+        }
+
+        .hero-title {
+            margin-top: 12px;
+            font-size: clamp(13px, 2vw, 17px);
+            color: var(--muted);
+            font-weight: 400;
+            letter-spacing: 0.08em;
+        }
+
+        .hero-contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            margin-left: 20%;
+            font-size: 13px;
+            color: var(--muted);
+
+        }
+
+
+        .hero-contacts a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .hero-contacts a:hover {
+            opacity: 0.7;
+        }
+
+        .hero-divider {
+            margin-top: 36px;
+            height: 1px;
+            background: linear-gradient(to left, transparent, var(--accent) 50%, transparent);
+            opacity: 0.3;
+        }
+
+        .hero-summary {
+            margin-top: 28px;
+            font-size: clamp(13px, 1.8vw, 16px);
+            line-height: 1.9;
+            color: rgba(232, 232, 240, 0.7);
+            max-width: 640px;
+        }
+
+        /* avatar placeholder */
+        .avatar {
+            width: clamp(80px, 12vw, 130px);
+            height: clamp(80px, 12vw, 130px);
+            border-radius: 20%;
+            background: linear-gradient(135deg, var(--accent2), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(28px, 5vw, 52px);
+            flex-shrink: 0;
+            box-shadow: 0 0 100px 10px rgba(255, 255, 0, 0.131);
+        }
+
+        @media(max-width:460px) {
+
+            .hero-contacts {
+                align-items: center;
+                margin-left: 0;
+
+            }
+
+            .avatar {
+                width: clamp(100px, 12vw, 130px);
+                height: clamp(100px, 12vw, 130px);
+                border-radius: 20%;
+                background: linear-gradient(135deg, var(--accent2), var(--accent));
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: clamp(28px, 5vw, 52px);
+                flex-shrink: 0;
+            }
+        }
+
+        /* === PAGE 2: EXPERIENCE === */
+        .page-section {
+            padding: clamp(36px, 6vw, 72px) clamp(28px, 6vw, 72px);
+        }
+
+        .section-label {
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0 24px;
+            position: relative;
+        }
+
+        .timeline-dot-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+            padding-top: 4px;
+        }
+
+        .timeline-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .timeline-line {
+            width: 1px;
+            flex: 1;
+            background: var(--border);
+            margin-top: 6px;
+            min-height: 40px;
+        }
+
+        .timeline-item:last-child .timeline-line {
+            display: none;
+        }
+
+        .timeline-body {
+            padding-bottom: 8px;
+        }
+
+        .portof-title {
+            font-size: clamp(15px, 2vw, 18px);
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .portof-short {
+            font-size: 13px;
+            color: var(--accent);
+            margin-top: 2px;
+            font-weight: 500;
+        }
+
+        .job-date {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+
+        .portof-caption {
+            margin-top: 10px;
+            font-size: clamp(12px, 1.6vw, 14px);
+            line-height: 1.8;
+            color: rgba(232, 232, 240, 0.6);
+        }
+
+        /* === PAGE 3: SKILLS === */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 16px;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px 18px;
+        }
+
+        .skill-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .skill-bar-track {
+            height: 3px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 99px;
+            overflow: hidden;
+        }
+
+        .skill-bar-fill {
+            height: 100%;
+            border-radius: 99px;
+            background: linear-gradient(to left, var(--accent2), var(--accent));
+            transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .skill-level {
+            font-size: 11px;
+            color: var(--muted);
+            margin-top: 6px;
+            text-align: left;
+        }
+
+        /* === PAGE 4: social === */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .social-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px 20px;
+            text-decoration: none;
+            color: var(--text);
+            transition: background 0.25s, border-color 0.25s, transform 0.25s;
+        }
+
+        .social-card:hover {
+            background: rgba(200, 169, 110, 0.07);
+            border-color: rgba(200, 169, 110, 0.35);
+            transform: translateY(-3px);
+        }
+
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .social-icon img {
+            width: 46px;
+            height: 46px;
+        }
+
+        .social-info {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            min-width: 0;
+        }
+
+        .social-name {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .social-handle {
+            font-size: 12px;
+            color: var(--accent);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .social-desc {
+            font-size: 11px;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+
+        /* ── SCROLL PROGRESS BAR ── */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--accent2), var(--accent));
+            z-index: 1000;
+            transition: width 0.1s;
+        }
+
+        /* ── PAGE INDICATOR DOTS ── */
+        #dots {
+            position: fixed;
+            right: clamp(8px, 2vw, 24px);
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--muted);
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .dot.active {
+            background: var(--accent);
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="progress-bar"></div>
+    <div id="dots"></div>
+
+    <div id="scroll-track">
+        <!-- PAGE 1 -->
+        <div class="page-card" data-page="1">
+            <!-- <span class="page-num">۰۱ / معرفی</span> -->
+            <div class="page-hero">
+                <div class="hero-contacts">
+                    <div class="avatar">👤</div>
+                </div>
+                <div>
+                    <h1 class="hero-name">سینا <span>فیروزیان</span></h1>
+                    <div class="hero-divider"></div>
+                    <div class="hero-divider"></div>
+                    <!-- <p class="hero-summary">
+        </p> -->
+                    <p class="hero-title"> برنامه نویس Backend &nbsp;·&nbsp; طراح UI/UX</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 2: معرفی -->
+        <div class="page-card" data-page="2">
+            <!-- <span class="page-num">۰۲ / تجربه کاری</span> -->
+            <div class="page-section">
+                <div class="section-label">آشنایی</div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot-col">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="timeline-body">
+                            <div class="portof-title">عاشق دنیای فناوری</div>
+                            <div class="portof-short">کامپیوتر و توسعه نرم‌افزار</div>
+                            <!-- <div class="job-date">۱۴۰۱ – ۱۴۰۳</div> -->
+                            <div class="portof-caption">همیشه در حال یادگیری تکنولوژی‌های جدید، حل مسائل پیچیده و تبدیل
+                                ایده‌ها به پروژه‌های کاربردی</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot-col">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="timeline-body">
+                            <div class="portof-title">حل‌کننده مسئله</div>
+                            <div class="portof-short">معما و چالش‌های فکری</div>
+                            <!-- <div class="job-date">۱۳۹۸ – ۱۴۰۱</div> -->
+                            <div class="portof-caption">لذت بردن از تحلیل، منطق و پیدا کردن راه‌حل برای مسائل پیچیده
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot-col">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="timeline-body">
+                            <div class="portof-title">دوستدار حیوانات</div>
+                            <div class="portof-short">طبیعت و زندگی</div>
+                            <!-- <div class="job-date">۱۳۹۶ – ۱۳۹۸</div> -->
+                            <div class="portof-caption">علاقه‌مند به حیوانات و اهمیت دادن به دنیای اطراف</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 3: مهارت‌ها -->
+        <div class="page-card" data-page="3">
+            <!-- <span class="page-num">۰۳ / مهارت‌ها</span> -->
+            <div class="page-section">
+                <div class="section-label">مهارت‌</div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-name">HTML</div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="width:0" data-w="92%"></div>
+                        </div>
+                        <div class="skill-level">90%</div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-name">CSS</div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="width:0" data-w="85%"></div>
+                        </div>
+                        <div class="skill-level">80%</div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-name">BootStrap</div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="width:0" data-w="100%"></div>
+                        </div>
+                        <div class="skill-level">100%</div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-name">JavaScript</div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="width:0" data-w="60%"></div>
+                        </div>
+                        <div class="skill-level">60%</div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-name">Python</div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="width:0" data-w="70%"></div>
+                        </div>
+                        <div class="skill-level">70%</div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-name">Django</div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="width:0" data-w="75%"></div>
+                        </div>
+                        <div class="skill-level">75%</div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-name">SQL</div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="width:0" data-w="55%"></div>
+                        </div>
+                        <div class="skill-level">55%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 4: تحصیلات -->
+        <div class="snap-section">
+            <div class="page-card" data-index="3">
+                <!-- <span class="page-num">۰۴ / شبکه‌های اجتماعی</span> -->
+                <div class="page-inner">
+                    <div class="page-section">
+                        <div class="section-label">ارتباط با من</div>
+                        <div class="social-grid">
+
+                            <a href="https://github.com/sinafiruzian" target="_blank" class="social-card">
+                                <div class="social-icon">
+                                    <img src="/social/github.png" alt="github">
+                                </div>
+                                <div class="social-info">
+                                    <div class="social-name">GitHub</div>
+                                    <div class="social-handle">github.com/sinafiruzian</div>
+                                    <div class="social-desc">پروژه‌های متن‌باز</div>
+                                </div>
+                            </a>
+
+                            <a href="https://t.me/Sinos60" target="_blank" class="social-card">
+                                <div class="social-icon">
+                                    <img src="/social/telegram.png" alt="">
+                                </div>
+                                <div class="social-info">
+                                    <div class="social-name">Telegram</div>
+                                    <div class="social-handle" dir="ltr">@Sinos60</div>
+                                    <div class="social-desc">ارتباط مستقیم</div>
+                                </div>
+                            </a>
+
+                            <a href="https://t.me/Sinos60" target="_blank" class="social-card">
+                                <div class="social-icon">
+                                    <img src="/social/instagram.png" alt="">
+                                </div>
+                                <div class="social-info">
+                                    <div class="social-name">Instagram</div>
+                                    <div class="social-handle" dir="ltr">sina._.firuzian</div>
+                                    <div class="social-desc"><span
+                                            style="background: rgba(255, 0, 0, 0.321); border-radius: 20px; padding: 0 10px;color: #0a0a0f;">Not
+                                            Active</span></div>
+                                </div>
+                            </a>
+
+                            <a href="mailto:firuziansina@gmail.com" class="social-card">
+                                <div class="social-icon">
+                                    <img src="/social/gmail.png" alt="">
+                                </div>
+                                <div class="social-info">
+                                    <div class="social-name">Gmail</div>
+                                    <div class="social-handle">firuziansina@gmail.com</div>
+                                    <div class="social-desc">برای همکاری‌های حرفه‌ای</div>
+                                </div>
+                            </a>
+
+                            <a href="tel:09018894512" class="social-card">
+                                <div class="social-icon">
+                                    <img src="/social/call.png" alt="">
+                                </div>
+                                <div class="social-info">
+                                    <div class="social-name">Number</div>
+                                    <div class="social-handle" dir="ltr">+989018894512</div>
+                                    <div class="social-desc"></div>
+                                </div>
+                            </a>
+
+                            <a href="https://sinafiruzian.ir" target="_blank" class="social-card">
+                                <div class="social-icon"><img src="social/website.png" alt=""></div>
+                                <div class="social-info">
+                                    <div class="social-name">sinafiruzian.ir</div>
+                                    <div class="social-handle"></div>
+                                    <div class="social-desc"></div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>‌
+    </div>
+
+    <script>
+        const cards = [...document.querySelectorAll('.page-card')];
+        const progressBar = document.getElementById('progress-bar');
+        const dotsContainer = document.getElementById('dots');
+
+        // Build dots
+        cards.forEach((_, i) => {
+            const d = document.createElement('div');
+            d.className = 'dot';
+            d.title = `صفحه ${i + 1}`;
+            d.addEventListener('click', () => {
+                cards[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+            dotsContainer.appendChild(d);
+        });
+        const dots = [...dotsContainer.querySelectorAll('.dot')];
+
+        // Animate skill bars when page 3 enters viewport
+        let skillsAnimated = false;
+        function animateSkills() {
+            if (skillsAnimated) return;
+            document.querySelectorAll('.skill-bar-fill').forEach(bar => {
+                bar.style.width = bar.dataset.w;
+            });
+            skillsAnimated = true;
+        }
+
+        function getCardCenter(card) {
+            const r = card.getBoundingClientRect();
+            return r.top + r.height / 2;
+        }
+
+        function onScroll() {
+            const winH = window.innerHeight;
+            const mid = winH / 2;
+
+            // Progress bar
+            const docH = document.documentElement.scrollHeight - winH;
+            const pct = Math.min(100, (window.scrollY / docH) * 100);
+            progressBar.style.width = pct + '%';
+
+            let activeIdx = 0;
+            let minDist = Infinity;
+
+            cards.forEach((card, i) => {
+                const center = getCardCenter(card);
+                const dist = Math.abs(center - mid);
+                if (dist < minDist) { minDist = dist; activeIdx = i; }
+            });
+
+            cards.forEach((card, i) => {
+                card.classList.remove('is-active', 'is-past', 'is-next');
+
+                if (i === activeIdx) {
+                    card.classList.add('is-active');
+                } else if (i === activeIdx + 1) {
+                    card.classList.add('is-next');
+                } else if (i < activeIdx) {
+                    card.classList.add('is-past');
+                }
+            });
+
+            dots.forEach((d, i) => d.classList.toggle('active', i === activeIdx));
+
+            // trigger skills animation when page 3 is active
+            if (activeIdx === 2) animateSkills();
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    </script>
+</body>
+
+</html>
