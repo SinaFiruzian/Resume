@@ -201,7 +201,7 @@
     border: none;
     border-radius: 1rem;
     padding: 2%;
-    background-image: url("/img/icon/send.png");
+    background-image: url("../img/icon/send.png");
     background-size: 30px;
     background-repeat: no-repeat;
     width: 40px;

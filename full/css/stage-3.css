@@ -4,7 +4,7 @@
         color: #fff;
         font-size: 25px;
         direction: rtl;
-        background-image: url("/img/stage-3/stage-3.jpg");
+        background-image: url("../img/stage-3/stage-3.jpg");
         background-repeat: no-repeat;
         /* background-size: cover; */
     }
@@ -176,7 +176,7 @@
 
     .project {
         background: rgb(20, 20, 20);
-        background-image: url("/img/stage-3/deep-stage-3.jpg");
+        background-image: url("../img/stage-3/deep-stage-3.jpg");
         background-size: cover;
         border-radius: 2rem;
         height: 10rem;
@@ -242,17 +242,17 @@
 
 
     .project-1 {
-        background: url("/img/stage-3/Explore.png");
+        background: url("../img/stage-3/Explore.png");
         background-size: cover;
     }
 
     .project-2 {
-        background: url("/img/stage-3/nusic-pg.png");
+        background: url("../img/stage-3/nusic-pg.png");
         background-size: cover;
     }
 
     .project-3 {
-        background: url("/img/stage-3/panel.png");
+        background: url("../img/stage-3/panel.png");
         background-size: cover;
         box-shadow: 10px 8px 20px 0px rgba(0, 0, 0, 0.315), inset 0px 0px 10px rgb(0, 0, 0);
     }
